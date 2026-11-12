@@ -42,8 +42,8 @@ public class GameSequenceManager : MonoBehaviour
     public List<SequenceStep> sequence = new List<SequenceStep>();
 
     public List<DialogueLines> successLines, failureLines;
-    List<DialogueLines> successLinesUsed = new();
-    List<DialogueLines> failureLinesUsed = new();
+    [SerializeField] List<DialogueLines> successLinesUsed = new();
+    [SerializeField] List<DialogueLines> failureLinesUsed = new();
 
     private int currentStep = 0;
 
@@ -74,6 +74,19 @@ public class GameSequenceManager : MonoBehaviour
 
     public void SlimeEntered(bool isCorrect)
     {
+        if (successLines.Count == 0)
+        {
+            //successLines = successLinesUsed;
+            successLines.AddRange(successLinesUsed);
+            successLinesUsed.Clear();
+        }
+        if (failureLines.Count == 0)
+        {
+            //failureLines = failureLinesUsed;
+            failureLines.AddRange(failureLinesUsed);
+            failureLinesUsed.Clear();
+        }
+
         if (isCorrect)
         {
             //play good line
@@ -81,11 +94,7 @@ public class GameSequenceManager : MonoBehaviour
             dialogueManager.QueueDialogue(successLines[index]);
             successLinesUsed.Add(successLines[index]);
             successLines.RemoveAt(index);
-            if (successLines.Count == 0)
-            {
-                successLines = successLinesUsed;
-                successLinesUsed.Clear();
-            }
+
         }
         else
         {
@@ -94,11 +103,6 @@ public class GameSequenceManager : MonoBehaviour
             dialogueManager.QueueDialogue(failureLines[index]);
             failureLinesUsed.Add(failureLines[index]);
             failureLines.RemoveAt(index);
-            if (failureLines.Count == 0)
-            {
-                failureLines = failureLinesUsed;
-                failureLinesUsed.Clear();
-            }
         }
 
 /*        if (currentStep >= sequence.Count)

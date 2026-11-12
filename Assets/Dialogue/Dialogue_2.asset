@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Dialogue_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: cum :3
-    audio: {fileID: 0}
-  - text: 
+  - text: Here's your first slime!
     audio: {fileID: 0}

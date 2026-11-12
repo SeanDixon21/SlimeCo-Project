@@ -13,9 +13,20 @@ MonoBehaviour:
   m_Name: Dialogue_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Dialogue 1
+  - text: Hello there! You must be employee 265!
     audio: {fileID: 0}
-  - text: Dialogue 2
+  - text: My am S.A.M, your Supervisionary Assitant Module. I will be here to help
+      you settle into your new role.
     audio: {fileID: 0}
-  - text: Dialogue 3
+  - text: Here at SlimeCo we produce friendly slimes that produce positive emotions
+      for our customers.
+    audio: {fileID: 0}
+  - text: Living in a dying dystopian world can be depressing and gloomy. We at SlimeCo
+      believe a better tomorrow, lies within.
+    audio: {fileID: 0}
+  - text: You job is to sort any sad slimes out from the good ones.
+    audio: {fileID: 0}
+  - text: Put good slimes in the right tube and bad slimes in the left
+    audio: {fileID: 0}
+  - text: Pretty simple for such good pay!
     audio: {fileID: 0}

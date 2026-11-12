@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     private int currentLine = 0;
     Coroutine C_Typer;
     public AudioSource source;
+    public GameObject ContinueButton;
 
     // PUBLIC FUNCTION - Can be called by UI buttons.
     public void QueueDialogue(DialogueLines lines)
@@ -30,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     public void AdvanceDialogue()
     {
+        ContinueButton.SetActive(false);
         if (currentDialogue == null) return;
         currentLine++;
         //advance currentdialogue to the next line here
@@ -60,6 +62,7 @@ public class DialogueManager : MonoBehaviour
             i++;
         }
         C_Typer = null;
+        ContinueButton.SetActive(true);
     }
 
     public void EndDialogue()

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Failure 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Bad boy 1
+  - text: Oh careful, that tube is only for slimes that need rehabilitation.
     audio: {fileID: 0}

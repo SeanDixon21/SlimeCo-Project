@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Failure 3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Bad boy 3
+  - text: We dont want customers feeling sad.
     audio: {fileID: 0}

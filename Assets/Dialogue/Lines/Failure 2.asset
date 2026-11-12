@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Failure 2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Bad boy 2
+  - text: One or two mistakes is okay but try not to make a habit of it.
     audio: {fileID: 0}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Failure 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Bad boy 4
+  - text: Maybe we need to get a clearer sign put on that tube.
     audio: {fileID: 0}

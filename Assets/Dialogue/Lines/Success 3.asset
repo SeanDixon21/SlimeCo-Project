@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Success 3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Well done 3
+  - text: Good Job!
     audio: {fileID: 0}

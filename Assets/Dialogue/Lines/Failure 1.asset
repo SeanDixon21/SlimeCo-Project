@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Failure 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: 
+  - text: Bad boy 1
     audio: {fileID: 0}
-  eventID: 

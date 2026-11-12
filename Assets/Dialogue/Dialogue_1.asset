@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Dialogue_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: 
+  - text: Dialogue 1
     audio: {fileID: 0}
-  - text: 
+  - text: Dialogue 2
     audio: {fileID: 0}
-  - text: 
+  - text: Dialogue 3
     audio: {fileID: 0}
-  eventID: 

@@ -42,6 +42,8 @@ public class GameSequenceManager : MonoBehaviour
     public List<SequenceStep> sequence = new List<SequenceStep>();
 
     public List<DialogueLines> successLines, failureLines;
+    List<DialogueLines> successLinesUsed = new();
+    List<DialogueLines> failureLinesUsed = new();
 
     private int currentStep = 0;
 
@@ -57,6 +59,11 @@ public class GameSequenceManager : MonoBehaviour
         SlimePipe.onSlimeEntered -= SlimeEntered;
     }
 
+    void Start()
+    {
+        AdvanceSequence();
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -67,28 +74,37 @@ public class GameSequenceManager : MonoBehaviour
 
     public void SlimeEntered(bool isCorrect)
     {
-        if (currentStep < sequence.Count)
-        {
-            //proceed sequence as usual
-            AdvanceSequence();
-            return;
-        }
-
         if (isCorrect)
         {
             //play good line
-            dialogueManager.QueueDialogue(successLines[UnityEngine.Random.Range(0, successLines.Count)]);
+            int index = UnityEngine.Random.Range(0, successLines.Count);
+            dialogueManager.QueueDialogue(successLines[index]);
+            successLinesUsed.Add(successLines[index]);
+            successLines.RemoveAt(index);
+            if (successLines.Count == 0)
+            {
+                successLines = successLinesUsed;
+                successLinesUsed.Clear();
+            }
         }
         else
         {
             //play bad line
-            dialogueManager.QueueDialogue(failureLines[UnityEngine.Random.Range(0, failureLines.Count)]);
+            int index = UnityEngine.Random.Range(0, failureLines.Count);
+            dialogueManager.QueueDialogue(failureLines[index]);
+            failureLinesUsed.Add(failureLines[index]);
+            failureLines.RemoveAt(index);
+            if (failureLines.Count == 0)
+            {
+                failureLines = failureLinesUsed;
+                failureLinesUsed.Clear();
+            }
         }
-    }
 
-    public void AdvanceSequence(string s)
-    {
-        AdvanceSequence();
+/*        if (currentStep >= sequence.Count)
+        {
+            slimeSpawner.SpawnSlimeRandom();
+        }*/
     }
 
     // PUBLIC FUNCTION - Can also be called by UI buttons.

@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue Settings")]
     public TMP_Text dialogueText;
 
-    [TextArea(2, 5)]
     public DialogueLines currentDialogue;
     private int currentLine = 0;
     Coroutine C_Typer;
@@ -18,6 +17,11 @@ public class DialogueManager : MonoBehaviour
     // PUBLIC FUNCTION - Can be called by UI buttons.
     public void QueueDialogue(DialogueLines lines)
     {
+        if (C_Typer != null) 
+        {
+            StopCoroutine(C_Typer);
+            C_Typer = null;
+        }
         dialogueText.text = "";
         currentDialogue = lines;
         currentLine = -1;
@@ -60,7 +64,6 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        dialogueText.text = "";
         currentDialogue.Complete();
         currentDialogue = null;
         currentLine = 0;

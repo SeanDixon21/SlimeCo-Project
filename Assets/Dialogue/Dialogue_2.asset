@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - Here's a slime
-  - Stinky loser
-  eventID: 
+  - text: cum :3
+    audio: {fileID: 0}
+  - text: 
+    audio: {fileID: 0}

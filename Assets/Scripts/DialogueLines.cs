@@ -6,14 +6,11 @@ public class DialogueLines : ScriptableObject
 {
     public LineLine[] lines;
 
-    public string eventID;
-
-    public static event Action<string> OnDialogueComplete;
+    public static event Action OnDialogueComplete;
 
     public void Complete()
     {
-        if (eventID == "") return;
-        OnDialogueComplete?.Invoke(eventID);
+        OnDialogueComplete?.Invoke();
     }
 
     [Serializable]

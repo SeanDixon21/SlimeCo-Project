@@ -467,11 +467,11 @@ MonoBehaviour:
   audioSource: {fileID: 301670053}
   spawnSound: {fileID: 8300000, guid: 7da4d1b16c77f2a4aac65bb6ae30bc4f, type: 3}
   slimePrefabs:
-  - {fileID: 6240274412554229688, guid: f238735dd7c7f29438d73597243ec262, type: 3}
-  - {fileID: 6240274412554229688, guid: e21f503a7dcc0e342a7e44a4d965041c, type: 3}
+  - {fileID: 5367441190664037635, guid: facb6cb834e18dd4f8c04d9d307b4626, type: 3}
+  - {fileID: 4862424248371568171, guid: a76412095923ea54db3af0a64fd09be8, type: 3}
   - {fileID: 6240274412554229688, guid: 165d6363adf8c9d48b97be1b7cab8b48, type: 3}
-  - {fileID: 6240274412554229688, guid: 371977789f082374db96a35d8c32a569, type: 3}
-  - {fileID: 6240274412554229688, guid: 58ae2026ca4d55849b51249fb88d29d6, type: 3}
+  - {fileID: 5620043251631729521, guid: 957fd71d1ececc24880b460aefa83d59, type: 3}
+  - {fileID: 6791150350996448363, guid: 97f2988c3743e164bae08233b6786d54, type: 3}
   spawnPoint: {fileID: 1083514127}
 --- !u!4 &301670052
 Transform:
@@ -626,38 +626,14 @@ MonoBehaviour:
     customEvent:
       m_PersistentCalls:
         m_Calls: []
-  - eventType: 3
+  - eventType: 1
     lines: {fileID: 0}
-    slimePrefabIndex: 0
+    slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1365073679}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: QueueDialogue
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: d5353f078fa8098428bf54529f0205e8, type: 2}
-            m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
-            m_IntArgument: 1
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventType: 3
     lines: {fileID: 0}
     slimePrefabIndex: 0
@@ -668,104 +644,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 301670051}
           m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1365073679}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: NextDialogue
+          m_MethodName: SpawnSlimeRandom
           m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 1
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 0
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -776,8 +656,14 @@ MonoBehaviour:
           m_CallState: 2
   successLines:
   - {fileID: 11400000, guid: 7743772a77c209b408bdfc532517690d, type: 2}
+  - {fileID: 11400000, guid: 3f7472fe395057d41b1717ab0830b844, type: 2}
+  - {fileID: 11400000, guid: e2df18c40b606cc42a5965b39fba516a, type: 2}
+  - {fileID: 11400000, guid: cb4326586551732468dd65ed4d5e9904, type: 2}
   failureLines:
   - {fileID: 11400000, guid: c33bc37561110de4db28d9b808c26ec8, type: 2}
+  - {fileID: 11400000, guid: 0513614c22efdab48ac63a8c204edb58, type: 2}
+  - {fileID: 11400000, guid: 279785e4edcff77459aeca8243eacc7b, type: 2}
+  - {fileID: 11400000, guid: 5abbfd85a70e742409f48cbc1162731d, type: 2}
 --- !u!4 &425107955
 Transform:
   m_ObjectHideFlags: 0
@@ -2060,6 +1946,7 @@ GameObject:
   - component: {fileID: 1365073682}
   - component: {fileID: 1365073681}
   - component: {fileID: 1365073679}
+  - component: {fileID: 1365073684}
   m_Layer: 5
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -2081,7 +1968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   dialogueText: {fileID: 1761715945}
   currentDialogue: {fileID: 0}
-  source: {fileID: 0}
+  source: {fileID: 1365073684}
 --- !u!224 &1365073680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2165,6 +2052,103 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &1365073684
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365073678}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1426006882
 GameObject:
   m_ObjectHideFlags: 0

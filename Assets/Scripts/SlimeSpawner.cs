@@ -26,6 +26,11 @@ public class SlimeSpawner : MonoBehaviour
         }
     }
 
+    public void SpawnSlimeRandom()
+    {
+        SpawnSlime(Random.Range(0, slimePrefabs.Length));
+    }
+
     // PUBLIC FUNCTION - Can be called by UI buttons.
     public void SpawnSlime(int prefabIndex)
     {

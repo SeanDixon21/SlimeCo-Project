@@ -7,6 +7,8 @@ public class SlimePipe : MonoBehaviour
     [Header("Pipe Settings")]
     public string slimeTag = "Slime";
 
+    public AudioSource PipeThwop;
+
     public static event Action<bool> onSlimeEntered;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +32,7 @@ public class SlimePipe : MonoBehaviour
 
             // Destroy the slime.
             Destroy(slimeObject);
+            PipeThwop.Play();
         }
     }
 }

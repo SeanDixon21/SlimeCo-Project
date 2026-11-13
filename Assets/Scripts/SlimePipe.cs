@@ -11,22 +11,25 @@ public class SlimePipe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check whether the entering object is a slime.
-        SlimeCollision slime =
+        if (other.gameObject.layer == LayerMask.NameToLayer("SlimeTrigger"))
+        {
+            // Check whether the entering object is a slime.
+            SlimeCollision slime =
             other.GetComponentInParent<SlimeCollision>();
 
-        if (slime == null)
-            return;
+            if (slime == null)
+                return;
 
-        // Store the slime GameObject before destroying it.
-        GameObject slimeObject = slime.gameObject;
+            // Store the slime GameObject before destroying it.
+            GameObject slimeObject = slime.gameObject;
 
-        bool isCorrectSlime = other.gameObject.CompareTag(slimeTag);
+            bool isCorrectSlime = other.gameObject.CompareTag(slimeTag);
 
-        // Trigger the custom event.
-        onSlimeEntered.Invoke(isCorrectSlime);
+            // Trigger the custom event.
+            onSlimeEntered.Invoke(isCorrectSlime);
 
-        // Destroy the slime.
-        Destroy(slimeObject);
+            // Destroy the slime.
+            Destroy(slimeObject);
+        }
     }
 }

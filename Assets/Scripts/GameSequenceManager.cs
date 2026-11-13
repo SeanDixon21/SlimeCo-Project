@@ -68,7 +68,7 @@ public class GameSequenceManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AdvanceSequence();
+            //AdvanceSequence();
         }
     }
 

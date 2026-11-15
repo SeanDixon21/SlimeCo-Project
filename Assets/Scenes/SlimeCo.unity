@@ -669,7 +669,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlimePipe
   slimeTag: 0
-  FLip: 0
   PipeThwop: {fileID: 362088416}
 --- !u!82 &362088416
 AudioSource:
@@ -877,7 +876,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameSequenceManager
   dialogueManager: {fileID: 1365073679}
   slimeSpawner: {fileID: 301670051}
-  Pipe: {fileID: 11500000, guid: 8c8a97fb8c6d10a45b64bda575d96a48, type: 3}
+  ListofTexts:
+  - {fileID: 473777506}
+  - {fileID: 704249326}
+  - {fileID: 483856608}
+  - {fileID: 1782009535}
+  ResultsPanel: {fileID: 1814462714}
   sequence:
   - eventType: 0
     lines: {fileID: 11400000, guid: a0795dfaed74c3842a7f48b442be9f2e, type: 2}
@@ -900,7 +904,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 0c0893833e9fbe848a3d529a5e2b354a, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 2
             m_FloatArgument: 0
@@ -1004,7 +1008,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: c3654969618e58345a58cad4ec34d377, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: b6d353dfd3964f44fab17f88444497b7, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1211,6 +1215,26 @@ MonoBehaviour:
     customEvent:
       m_PersistentCalls:
         m_Calls: []
+  - eventType: 3
+    lines: {fileID: 0}
+    slimePrefabIndex: 0
+    targetObject: {fileID: 0}
+    setActive: 0
+    customEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: ShowResults
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   successLines:
   - {fileID: 11400000, guid: 7743772a77c209b408bdfc532517690d, type: 2}
   - {fileID: 11400000, guid: 3f7472fe395057d41b1717ab0830b844, type: 2}
@@ -2276,7 +2300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Slime Rehabilitation
+  m_text: Customer Shipping
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5479c89061e144146951960996ded558, type: 2}
   m_sharedMaterial: {fileID: 3440838677258961070, guid: 5479c89061e144146951960996ded558, type: 2}
@@ -3597,7 +3621,7 @@ Transform:
   m_GameObject: {fileID: 1502909619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 28.5, y: -0.5, z: 17.85}
+  m_LocalPosition: {x: -35.6, y: -0.49999952, z: 17.85}
   m_LocalScale: {x: 3.1125, y: 3.1125, z: 3.1125}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3753,7 +3777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Customer Shipping
+  m_text: Slime Rehabilitation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5479c89061e144146951960996ded558, type: 2}
   m_sharedMaterial: {fileID: 3440838677258961070, guid: 5479c89061e144146951960996ded558, type: 2}
@@ -3880,7 +3904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlimePipe
   slimeTag: 1
-  FLip: 0
   PipeThwop: {fileID: 1614570297}
 --- !u!61 &1614570296
 BoxCollider2D:
@@ -4422,7 +4445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1814462715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4662,12 +4685,12 @@ Transform:
   m_GameObject: {fileID: 1821337765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -35.6, y: -0.49999952, z: 17.85}
+  m_LocalPosition: {x: 28.5, y: -0.5, z: 17.85}
   m_LocalScale: {x: 3.1125, y: 3.1125, z: 3.1125}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 471416162}
   - {fileID: 1614570294}
+  - {fileID: 471416162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &1884947099

@@ -14,14 +14,7 @@ public class SlimePipe : MonoBehaviour
 
     [Header("Pipe Settings")]
 
-
     [SerializeField] private SlimeTagEnum slimeTag;
-
-
-
-
-
-    [SerializeField] bool FLip = false;
     public AudioSource PipeThwop;
 
     public static event Action<bool, string> onSlimeEntered;
@@ -32,8 +25,7 @@ public class SlimePipe : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("SlimeTrigger"))
         {
             // Check whether the entering object is a slime.
-            SlimeCollision slime =
-            other.GetComponentInParent<SlimeCollision>();
+            SlimeCollision slime = other.GetComponentInParent<SlimeCollision>();
 
             if (slime == null)
                 return;

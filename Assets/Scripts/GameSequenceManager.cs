@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using UnityEditor;
+using TMPro;
+using Unity.VisualScripting;
 
 public class GameSequenceManager : MonoBehaviour
 {
@@ -38,7 +40,19 @@ public class GameSequenceManager : MonoBehaviour
     [Header("References")]
     public DialogueManager dialogueManager;
     public SlimeSpawner slimeSpawner;
-    [SerializeField] private SlimePipe Pipe;
+
+    public List<TMP_Text> ListofTexts;
+    public GameObject ResultsPanel; 
+
+    private struct results
+    {
+        public int ShipGood;
+        public int ShipBad;
+        public int RehabGood;
+        public int RehabBad;
+
+
+    }
 
     [Header("Sequence Settings")]
     public List<SequenceStep> sequence = new List<SequenceStep>();
@@ -64,25 +78,35 @@ public class GameSequenceManager : MonoBehaviour
     void Start()
     {
         AdvanceSequence();
+        ResultsPanel.SetActive(false);
     }
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //AdvanceSequence();
+            AdvanceSequence();
         }
     }
-
-    public void SlimeEntered(bool isCorrect, string sadSlime)
+    results ResultsTracker = new();
+    public void SlimeEntered(bool isCorrect, string pipeExpectancy)
     {
-        /*
-        if x is true and expected is good then +1 to aa
-        if x is false and expected is good then +1 to ab
-        if x is true and expected is bad then +1 to ba
-        if x is false and expected is bad then +1 bb
-        */
-
+        if (isCorrect && pipeExpectancy == "GoodSlime")
+        {
+            ResultsTracker.ShipGood++;
+        }
+        else if (!isCorrect && pipeExpectancy == "GoodSlime")
+        {
+            ResultsTracker.ShipBad++;
+        }
+        else if (isCorrect && pipeExpectancy == "BadSlime")
+        {
+            ResultsTracker.RehabGood++;
+        }
+        else if (!isCorrect && pipeExpectancy == "BadSlime")
+        {
+            ResultsTracker.RehabBad++;
+        }
 
 
         if (successLines.Count == 0)
@@ -115,7 +139,6 @@ public class GameSequenceManager : MonoBehaviour
             failureLinesUsed.Add(failureLines[index]);
             failureLines.RemoveAt(index);
         }
-
 /*        if (currentStep >= sequence.Count)
         {
             slimeSpawner.SpawnSlimeRandom();
@@ -125,6 +148,16 @@ public class GameSequenceManager : MonoBehaviour
     // PUBLIC FUNCTION - Can also be called by UI buttons.
 
 
+
+
+    public void ShowResults()
+    {
+        ListofTexts[0].SetText(ResultsTracker.ShipGood.ToString());
+        ListofTexts[1].SetText(ResultsTracker.ShipBad.ToString());
+        ListofTexts[2].SetText(ResultsTracker.RehabGood.ToString());
+        ListofTexts[3].SetText(ResultsTracker.RehabBad.ToString());
+        ResultsPanel.SetActive(true);
+    }
     public void AdvanceSequence()
     {
         if (currentStep >= sequence.Count)

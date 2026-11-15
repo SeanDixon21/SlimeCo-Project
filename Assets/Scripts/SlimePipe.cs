@@ -2,14 +2,30 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+
 public class SlimePipe : MonoBehaviour
 {
-    [Header("Pipe Settings")]
-    public string slimeTag = "Slime";
+    private enum SlimeTagEnum
+    {
+        GoodSlime,
+        BadSlime,
+    }
 
+    [Header("Pipe Settings")]
+
+
+    [SerializeField] private SlimeTagEnum slimeTag;
+
+
+
+
+
+    [SerializeField] bool FLip = false;
     public AudioSource PipeThwop;
 
-    public static event Action<bool> onSlimeEntered;
+    public static event Action<bool, string> onSlimeEntered;
+    //public static event Action<bool> recordSlime;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,10 +41,12 @@ public class SlimePipe : MonoBehaviour
             // Store the slime GameObject before destroying it.
             GameObject slimeObject = slime.gameObject;
 
-            bool isCorrectSlime = other.gameObject.CompareTag(slimeTag);
+            bool isCorrectSlime = other.gameObject.CompareTag(slimeTag.ToString());
+            
 
             // Trigger the custom event.
-            onSlimeEntered.Invoke(isCorrectSlime);
+            onSlimeEntered.Invoke(isCorrectSlime, slimeTag.ToString());
+
 
             // Destroy the slime.
             Destroy(slimeObject);

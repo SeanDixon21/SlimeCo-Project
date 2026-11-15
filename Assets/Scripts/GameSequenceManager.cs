@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEditor;
 
 public class GameSequenceManager : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class GameSequenceManager : MonoBehaviour
     [Header("References")]
     public DialogueManager dialogueManager;
     public SlimeSpawner slimeSpawner;
+    [SerializeField] private SlimePipe Pipe;
 
     [Header("Sequence Settings")]
     public List<SequenceStep> sequence = new List<SequenceStep>();
@@ -72,8 +74,17 @@ public class GameSequenceManager : MonoBehaviour
         }
     }
 
-    public void SlimeEntered(bool isCorrect)
+    public void SlimeEntered(bool isCorrect, string sadSlime)
     {
+        /*
+        if x is true and expected is good then +1 to aa
+        if x is false and expected is good then +1 to ab
+        if x is true and expected is bad then +1 to ba
+        if x is false and expected is bad then +1 bb
+        */
+
+
+
         if (successLines.Count == 0)
         {
             //successLines = successLinesUsed;
@@ -112,6 +123,8 @@ public class GameSequenceManager : MonoBehaviour
     }
 
     // PUBLIC FUNCTION - Can also be called by UI buttons.
+
+
     public void AdvanceSequence()
     {
         if (currentStep >= sequence.Count)

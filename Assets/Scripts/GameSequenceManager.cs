@@ -77,15 +77,15 @@ public class GameSequenceManager : MonoBehaviour
 
     void Start()
     {
-        AdvanceSequence();
         ResultsPanel.SetActive(false);
+        AdvanceSequence();
     }
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AdvanceSequence();
+            //AdvanceSequence();
         }
     }
     results ResultsTracker = new();
@@ -94,18 +94,24 @@ public class GameSequenceManager : MonoBehaviour
         if (isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipGood++;
+            Debug.Log(isCorrect);
+            Debug.Log(pipeExpectancy);
+            Debug.Log(ResultsTracker.ShipGood);
         }
         else if (!isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipBad++;
+            Debug.Log(ResultsTracker.ShipBad);
         }
         else if (isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabGood++;
+            Debug.Log(ResultsTracker.RehabGood);
         }
         else if (!isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabBad++;
+            Debug.Log(ResultsTracker.RehabBad);
         }
 
 
@@ -152,6 +158,8 @@ public class GameSequenceManager : MonoBehaviour
 
     public void ShowResults()
     {
+        Debug.Log("ResultsShown");
+        ResultsPanel.SetActive(true);
         ListofTexts[0].SetText(ResultsTracker.ShipGood.ToString());
         ListofTexts[1].SetText(ResultsTracker.ShipBad.ToString());
         ListofTexts[2].SetText(ResultsTracker.RehabGood.ToString());

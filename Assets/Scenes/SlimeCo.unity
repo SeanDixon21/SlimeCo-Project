@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -12}
+  m_AnchoredPosition: {x: -150, y: -12}
   m_SizeDelta: {x: 564, y: 775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214422614
@@ -462,6 +462,9 @@ MonoBehaviour:
   - {fileID: 6240274412554229688, guid: 165d6363adf8c9d48b97be1b7cab8b48, type: 3}
   - {fileID: 5620043251631729521, guid: 957fd71d1ececc24880b460aefa83d59, type: 3}
   - {fileID: 6791150350996448363, guid: 97f2988c3743e164bae08233b6786d54, type: 3}
+  - {fileID: 5367441190664037635, guid: facb6cb834e18dd4f8c04d9d307b4626, type: 3}
+  - {fileID: 5367441190664037635, guid: facb6cb834e18dd4f8c04d9d307b4626, type: 3}
+  - {fileID: 5367441190664037635, guid: facb6cb834e18dd4f8c04d9d307b4626, type: 3}
   spawnPoint: {fileID: 1083514127}
 --- !u!4 &301670052
 Transform:
@@ -804,7 +807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -12}
+  m_AnchoredPosition: {x: 150, y: -12}
   m_SizeDelta: {x: 564, y: 775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415354831
@@ -879,8 +882,8 @@ MonoBehaviour:
   ListofTexts:
   - {fileID: 473777506}
   - {fileID: 704249326}
-  - {fileID: 483856608}
   - {fileID: 1782009535}
+  - {fileID: 483856608}
   ResultsPanel: {fileID: 1814462714}
   sequence:
   - eventType: 0
@@ -893,7 +896,7 @@ MonoBehaviour:
         m_Calls: []
   - eventType: 3
     lines: {fileID: 0}
-    slimePrefabIndex: 0
+    slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
@@ -1207,14 +1210,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventType: 0
-    lines: {fileID: 11400000, guid: 0a657c5f01f8bac4d81fa0858e36bdb7, type: 2}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - eventType: 3
     lines: {fileID: 0}
     slimePrefabIndex: 0
@@ -2300,7 +2295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Customer Shipping
+  m_text: Slime Rehabilitation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5479c89061e144146951960996ded558, type: 2}
   m_sharedMaterial: {fileID: 3440838677258961070, guid: 5479c89061e144146951960996ded558, type: 2}
@@ -3621,7 +3616,7 @@ Transform:
   m_GameObject: {fileID: 1502909619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -35.6, y: -0.49999952, z: 17.85}
+  m_LocalPosition: {x: -40, y: -0.49999952, z: 17.85}
   m_LocalScale: {x: 3.1125, y: 3.1125, z: 3.1125}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3777,7 +3772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Slime Rehabilitation
+  m_text: Customer Shipping
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5479c89061e144146951960996ded558, type: 2}
   m_sharedMaterial: {fileID: 3440838677258961070, guid: 5479c89061e144146951960996ded558, type: 2}
@@ -4445,7 +4440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1814462715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4685,7 +4680,7 @@ Transform:
   m_GameObject: {fileID: 1821337765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 28.5, y: -0.5, z: 17.85}
+  m_LocalPosition: {x: 40, y: -0.5, z: 17.85}
   m_LocalScale: {x: 3.1125, y: 3.1125, z: 3.1125}
   m_ConstrainProportionsScale: 0
   m_Children:

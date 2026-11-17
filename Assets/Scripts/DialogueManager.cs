@@ -1,7 +1,8 @@
-using UnityEngine;
-using TMPro;
-using System.Linq;
 using System.Collections;
+using System.Linq;
+using TMPro;
+using Unity.Android.Gradle;
+using UnityEngine;
 using static DialogueLines;
 
 public class DialogueManager : MonoBehaviour
@@ -11,6 +12,9 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueLines currentDialogue;
     private int currentLine = 0;
+    [SerializeField] private bool skippable;
+    [SerializeField] private bool requestSkip = false;
+    [SerializeField] float typerSpeed = 0.02f;
     Coroutine C_Typer;
     public AudioSource source;
     public GameObject ContinueButton;
@@ -32,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     public void AdvanceDialogue()
     {
         ContinueButton.SetActive(false);
+        skippable = false;
         if (currentDialogue == null) return;
         currentLine++;
         //advance currentdialogue to the next line here
@@ -53,16 +58,35 @@ public class DialogueManager : MonoBehaviour
     {
         int i = 0;
         //play audio here
-        if (line.audio != null) source.PlayOneShot(line.audio);
+        if (line.audio != null)
+        {
+            source.Stop();
+            source.PlayOneShot(line.audio);
+        }
         while (i < line.text.Length)
         {
+            //StopCoroutine(C_Typer);
+            //dialogueText.text += line.text;
             char c = line.text[i];
             dialogueText.text += c;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(typerSpeed);
             i++;
         }
+
         C_Typer = null;
+        skippable = true;
         ContinueButton.SetActive(true);
+    }
+
+    public void Update()
+    {
+        while (Input.GetKeyDown(KeyCode.Space))
+        {
+            typerSpeed = 0.00000002f;
+            
+        }
+        return;
+        typerSpeed = 0.02f;
     }
 
     public void EndDialogue()

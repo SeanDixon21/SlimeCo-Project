@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -12}
+  m_AnchoredPosition: {x: -150, y: -12}
   m_SizeDelta: {x: 564, y: 775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214422614
@@ -807,7 +807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -12}
+  m_AnchoredPosition: {x: 150, y: -12}
   m_SizeDelta: {x: 564, y: 775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415354831
@@ -3148,6 +3148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   dialogueText: {fileID: 1761715945}
   currentDialogue: {fileID: 0}
+  skippable: 0
+  finishTyping: 0
   source: {fileID: 1365073684}
   ContinueButton: {fileID: 270498919}
 --- !u!224 &1365073680

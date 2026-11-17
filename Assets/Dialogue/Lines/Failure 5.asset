@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Oh no
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: cfd2f4a15046684469f81dd8cd883018, type: 3}

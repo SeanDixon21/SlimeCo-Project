@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Maybe we need to get a clearer sign put on that tube.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5bd6d39896e7d5d49a155054eaef1ae4, type: 3}

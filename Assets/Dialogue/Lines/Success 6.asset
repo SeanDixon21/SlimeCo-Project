@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Just think of all the lives you are helping.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0fdd92ed179d9c64da12eaddce2bc4ac, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Our customers will be so happy!
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: fb5b7699a43e83145b26066c76c95d17, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Oh! A sad slime.. These need to be sent to Slime Rehabilitation.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 395e29472df4278418316b73a8b02e78, type: 3}

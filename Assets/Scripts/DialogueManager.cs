@@ -13,8 +13,7 @@ public class DialogueManager : MonoBehaviour
     public DialogueLines currentDialogue;
     private int currentLine = 0;
     [SerializeField] private bool skippable;
-    [SerializeField] private bool requestSkip = false;
-    [SerializeField] float typerSpeed = 0.02f;
+    [SerializeField] private bool finishTyping = false;
     Coroutine C_Typer;
     public AudioSource source;
     public GameObject ContinueButton;
@@ -57,19 +56,26 @@ public class DialogueManager : MonoBehaviour
     IEnumerator Typer(LineLine line)
     {
         int i = 0;
-        //play audio here
+        finishTyping = false;
+
         if (line.audio != null)
         {
             source.Stop();
             source.PlayOneShot(line.audio);
         }
+
         while (i < line.text.Length)
         {
-            //StopCoroutine(C_Typer);
-            //dialogueText.text += line.text;
+            if (finishTyping)
+            {
+                dialogueText.text = line.text;
+                break;
+            }
+
             char c = line.text[i];
             dialogueText.text += c;
-            yield return new WaitForSeconds(typerSpeed);
+
+            yield return new WaitForSeconds(0.02f);
             i++;
         }
 
@@ -80,13 +86,17 @@ public class DialogueManager : MonoBehaviour
 
     public void Update()
     {
-        while (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            typerSpeed = 0.00000002f;
-            
+            if (C_Typer != null)
+            {
+                finishTyping = true;
+            }
+            else if (skippable)
+            {
+                AdvanceDialogue();
+            }
         }
-        return;
-        typerSpeed = 0.02f;
     }
 
     public void EndDialogue()

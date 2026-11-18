@@ -907,7 +907,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: d4be1d5e604908145a4b5df2f917dcb7, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 2
             m_FloatArgument: 0

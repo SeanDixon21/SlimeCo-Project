@@ -895,8 +895,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 2
+    lines: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
+    slimePrefabIndex: 0
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
@@ -909,7 +909,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
-            m_IntArgument: 2
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: f8af68090b52c9c4f87eec95a38343f0, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: d5353f078fa8098428bf54529f0205e8, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0

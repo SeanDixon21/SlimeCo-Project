@@ -238,16 +238,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202890116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 904881147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 925, y: 478.65}
+  m_AnchoredPosition: {x: 725, y: 365.50006}
   m_SizeDelta: {x: 1450, y: 731}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &202890118
@@ -762,6 +762,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 425107956}
+        m_TargetAssemblyTypeName: CustomerRequests, Assembly-CSharp
+        m_MethodName: AddSlimeToShipment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   slimeTag: 0
   PipeThwop: {fileID: 362088416}
 --- !u!82 &362088416
@@ -949,6 +961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425107955}
   - component: {fileID: 425107954}
+  - component: {fileID: 425107956}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -979,7 +992,7 @@ MonoBehaviour:
   sequence:
   - eventType: 0
     lines: {fileID: 11400000, guid: a0795dfaed74c3842a7f48b442be9f2e, type: 2}
-    slimePrefabIndex: 0
+    slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
@@ -987,7 +1000,7 @@ MonoBehaviour:
         m_Calls: []
   - eventType: 3
     lines: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
-    slimePrefabIndex: 0
+    slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
@@ -1017,81 +1030,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 2
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 3
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 2
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 4
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 1
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 2
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 3
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 4
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - eventType: 1
-    lines: {fileID: 0}
-    slimePrefabIndex: 2
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls: []
   - eventType: 3
-    lines: {fileID: 11400000, guid: d5353f078fa8098428bf54529f0205e8, type: 2}
-    slimePrefabIndex: 0
+    lines: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
+    slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
@@ -1102,221 +1043,53 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: d5353f078fa8098428bf54529f0205e8, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 301670051}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: SpawnSlimeRandom
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 0}
-    slimePrefabIndex: 0
-    targetObject: {fileID: 0}
-    setActive: 0
-    customEvent:
-      m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 425107954}
           m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
-          m_MethodName: ShowResults
+          m_MethodName: StartCustomers
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventType: 3
+    lines: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
+    slimePrefabIndex: 2
+    targetObject: {fileID: 0}
+    setActive: 0
+    customEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1365073679}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: QueueDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: StartCustomers
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1343,6 +1116,10 @@ MonoBehaviour:
   failureLinesUsed: []
   InstructionsFollowed: 0
   InstructionsNotFollowed: 0
+  CustomerWindow: {fileID: 904881146}
+  SlimeButons: {fileID: 600248579}
+  willRespond: 0
+  willAdvanceSequence: 0
 --- !u!4 &425107955
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,6 +1135,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425107956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425107953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39140f44c0e66ed43b827f95c5c848ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerRequests
+  Customers:
+  - {fileID: 1084760792}
+  - {fileID: 765563620}
+  - {fileID: 856367955}
+  - {fileID: 202890116}
+  - {fileID: 959093209}
+  CustomerIndex: 0
+  RequestCounter: {fileID: 1587975278}
+  slimeCounter: 0
 --- !u!1 &435874374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,7 +1926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &573813280
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2136,16 +1934,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573813279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 600248580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213, y: 72}
+  m_AnchoredPosition: {x: 0.000015258789, y: -80.00003}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573813281
@@ -2191,7 +1989,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 573813282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301670051}
+        m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
+        m_MethodName: buttonSpawnSlime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &573813282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,6 +2040,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573813279}
   m_CullTransparentMesh: 1
+--- !u!1 &600248579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600248580}
+  m_Layer: 5
+  m_Name: SlimeButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &600248580
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600248579}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1273670614}
+  - {fileID: 573813280}
+  - {fileID: 1050768678}
+  - {fileID: 1014614393}
+  m_Father: {fileID: 1365073680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -212.99998, y: 152.00003}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,16 +2462,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765563620}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 904881147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 925, y: 478.65}
+  m_AnchoredPosition: {x: 725, y: 365.50006}
   m_SizeDelta: {x: 1450, y: 731}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &765563622
@@ -2920,16 +2769,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856367955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 904881147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 925, y: 478.65}
+  m_AnchoredPosition: {x: 725, y: 365.50006}
   m_SizeDelta: {x: 1450, y: 731}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &856367957
@@ -2969,6 +2818,109 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856367955}
+  m_CullTransparentMesh: 1
+--- !u!1 &904881146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904881147}
+  - component: {fileID: 904881150}
+  - component: {fileID: 904881149}
+  - component: {fileID: 904881148}
+  m_Layer: 5
+  m_Name: CustomerWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &904881147
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904881146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1084760793}
+  - {fileID: 765563621}
+  - {fileID: 856367956}
+  - {fileID: 202890117}
+  - {fileID: 959093210}
+  - {fileID: 1587975280}
+  m_Father: {fileID: 1365073680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 562.5, y: 295.9}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &904881148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904881146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39140f44c0e66ed43b827f95c5c848ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerRequests
+  Customers:
+  - {fileID: 1084760792}
+  - {fileID: 765563620}
+  - {fileID: 856367955}
+  - {fileID: 202890116}
+  - {fileID: 959093209}
+  CustomerIndex: 0
+  RequestCounter: {fileID: 1587975278}
+  slimeCounter: 0
+--- !u!114 &904881149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904881146}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &904881150
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904881146}
   m_CullTransparentMesh: 1
 --- !u!1 &925467475
 GameObject:
@@ -3101,16 +3053,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959093209}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 904881147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 925, y: 478.65}
+  m_AnchoredPosition: {x: 725, y: 365.50006}
   m_SizeDelta: {x: 1450, y: 731}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &959093211
@@ -3306,7 +3258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1014614393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3314,16 +3266,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014614392}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 600248580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213, y: -88}
+  m_AnchoredPosition: {x: 0.000015258789, y: -240.00006}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014614394
@@ -3369,7 +3321,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014614395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301670051}
+        m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
+        m_MethodName: buttonSpawnSlime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014614395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3426,7 +3390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1050768678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3434,16 +3398,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050768677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 600248580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213, y: -8}
+  m_AnchoredPosition: {x: 0.000015258789, y: -160.00006}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050768679
@@ -3489,7 +3453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1050768680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301670051}
+        m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
+        m_MethodName: buttonSpawnSlime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1050768680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3576,7 +3552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1084760793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3584,16 +3560,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084760792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 904881147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 925, y: 478.65}
+  m_AnchoredPosition: {x: 725, y: 365.50006}
   m_SizeDelta: {x: 1450, y: 731}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1084760794
@@ -3884,7 +3860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1273670614
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3892,16 +3868,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273670613}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1365073680}
+  m_Father: {fileID: 600248580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213, y: 152}
+  m_AnchoredPosition: {x: 0.000015258789, y: -0.000030517578}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273670616
@@ -3993,7 +3969,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4038,6 +4014,7 @@ MonoBehaviour:
   finishTyping: 0
   source: {fileID: 1365073684}
   ContinueButton: {fileID: 270498919}
+  willAdvanceDialogue: 1
 --- !u!224 &1365073680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4051,16 +4028,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 12948626}
-  - {fileID: 1084760793}
-  - {fileID: 765563621}
-  - {fileID: 856367956}
-  - {fileID: 202890117}
-  - {fileID: 959093210}
+  - {fileID: 904881147}
   - {fileID: 1814462715}
-  - {fileID: 1273670614}
-  - {fileID: 573813280}
-  - {fileID: 1050768678}
-  - {fileID: 1014614393}
+  - {fileID: 600248580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4749,6 +4719,143 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510838084}
   m_CullTransparentMesh: 1
+--- !u!1 &1587975277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587975280}
+  - component: {fileID: 1587975279}
+  - component: {fileID: 1587975278}
+  m_Layer: 5
+  m_Name: Counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1587975278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587975277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0 / 4
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5479c89061e144146951960996ded558, type: 2}
+  m_sharedMaterial: {fileID: 3440838677258961070, guid: 5479c89061e144146951960996ded558, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 87.5
+  m_fontSizeBase: 87.5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -38.493774, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1587975279
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587975277}
+  m_CullTransparentMesh: 1
+--- !u!224 &1587975280
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587975277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 904881147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -438.2, y: -159.1}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1614570293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,7 +4904,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlimePipe
   PipeTriggerd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 301670051}
+        m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
+        m_MethodName: despawnSlime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   slimeTag: 1
   PipeThwop: {fileID: 1614570297}
 --- !u!61 &1614570296

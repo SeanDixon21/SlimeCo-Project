@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Dialogue_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Oh! A sad slime.. These need to be sent to Slime Rehabilitation.
-    audio: {fileID: 8300000, guid: 395e29472df4278418316b73a8b02e78, type: 3}
+  - text: Each slime you send down the shipment pipe will be added to the customers
+      package.
+    audio: {fileID: 0}
+  - text: Just make sure to discard any sad slimes.
+    audio: {fileID: 0}

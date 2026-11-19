@@ -29,6 +29,7 @@ public class SlimeSpawner : MonoBehaviour
     public void SpawnSlimeRandom()
     {
         SpawnSlime(Random.Range(0, slimePrefabs.Length));
+        slimeCurrentSpawned = true;
     }
     public void buttonSpawnSlime(int chosenslime)
     {
@@ -48,6 +49,7 @@ public class SlimeSpawner : MonoBehaviour
     // PUBLIC FUNCTION - Can be called by UI buttons.
     public void SpawnSlime(int prefabIndex)
     {
+        slimeCurrentSpawned = true;
         if (prefabIndex < 0 || prefabIndex >= slimePrefabs.Length)
         {
             Debug.LogError("Invalid slime prefab index!");

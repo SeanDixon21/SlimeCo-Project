@@ -15,19 +15,29 @@ public class DialogueManager : MonoBehaviour
     Coroutine C_Typer;
     public AudioSource source;
     public GameObject ContinueButton;
+    [SerializeField] bool willAdvanceDialogue;
 
     // PUBLIC FUNCTION - Can be called by UI buttons.
+
+    private void Start()
+    {
+        willAdvanceDialogue = true;
+    }
     public void QueueDialogue(DialogueLines lines)
     {
-        if (C_Typer != null) 
+        if (willAdvanceDialogue)
         {
-            StopCoroutine(C_Typer);
-            C_Typer = null;
+            if (C_Typer != null)
+            {
+                StopCoroutine(C_Typer);
+                C_Typer = null;
+            }
+            dialogueText.text = "";
+            currentDialogue = lines;
+            currentLine = -1;
+            AdvanceDialogue();
         }
-        dialogueText.text = "";
-        currentDialogue = lines;
-        currentLine = -1;
-        AdvanceDialogue();
+
     }
 
     public void AdvanceDialogue()
@@ -109,5 +119,9 @@ public class DialogueManager : MonoBehaviour
         currentDialogue.Complete();
         currentDialogue = null;
         currentLine = 0;
+    }
+    public void SetAdvanceDialogue(bool Advance)
+    {
+        willAdvanceDialogue = Advance;
     }
 }

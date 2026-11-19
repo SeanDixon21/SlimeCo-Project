@@ -64,6 +64,10 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] private int InstructionsNotFollowed = 0;
 
     private int currentStep = 0;
+    [SerializeField] GameObject CustomerWindow;
+    [SerializeField] GameObject SlimeButons;
+    [SerializeField] bool willRespond;
+    [SerializeField] bool willAdvanceSequence;
 
     private void OnEnable()
     {
@@ -83,6 +87,7 @@ public class GameSequenceManager : MonoBehaviour
         AdvanceSequence();
         InstructionsFollowed = -1;
         InstructionsNotFollowed = -1;
+        willAdvanceSequence = true;
     }
     
     void Update()
@@ -131,7 +136,7 @@ public class GameSequenceManager : MonoBehaviour
             failureLinesUsed.Clear();
         }
 
-            if (isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
+            if (willRespond && isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
             {
                 /*            //play RANDOM good line
                             int index = UnityEngine.Random.Range(0, successLines.Count);
@@ -143,7 +148,7 @@ public class GameSequenceManager : MonoBehaviour
                 successLines.RemoveAt(0);
                 AdvanceSequence();
             }
-            else if (!isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
+            else if (willRespond && !isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
             {
                 /*            //play RANDOM bad line
                             int index = UnityEngine.Random.Range(0, failureLines.Count);
@@ -157,8 +162,12 @@ public class GameSequenceManager : MonoBehaviour
             }
             else
             {
-                AdvanceSequence();
+            AdvanceSequence();
             }
+/*            else if (willAdvanceSequence)
+            {
+                AdvanceSequence();
+            }*/
         /*        if (currentStep >= sequence.Count)
                 {
                     slimeSpawner.SpawnSlimeRandom();
@@ -245,4 +254,22 @@ public class GameSequenceManager : MonoBehaviour
     {
         return currentStep;
     }
+
+/*    public void StartCustomers()
+    {
+        CustomerWindow.SetActive(true);
+    }
+    public void ShowButtons()
+    {
+        SlimeButons.SetActive(true);
+    }
+
+    public void SetResponse(bool Respond)
+    { 
+        willRespond = Respond;
+    }
+    public void SetAdvanceSequence(bool Advance)
+    {
+        willAdvanceSequence = Advance;
+    }*/
 }

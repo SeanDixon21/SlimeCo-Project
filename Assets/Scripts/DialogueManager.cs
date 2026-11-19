@@ -25,47 +25,50 @@ public class DialogueManager : MonoBehaviour
     }
     public void QueueDialogue(DialogueLines lines)
     {
-        if (willAdvanceDialogue)
+
+        if (C_Typer != null)
         {
-            if (C_Typer != null)
-            {
-                StopCoroutine(C_Typer);
-                C_Typer = null;
-            }
-            dialogueText.text = "";
-            currentDialogue = lines;
-            currentLine = -1;
-            Debug.Log("AdvancingDialogue");
-            AdvanceDialogue();
+            StopCoroutine(C_Typer);
+            C_Typer = null;
         }
+        dialogueText.text = "";
+        currentDialogue = lines;
+        currentLine = -1;
+        Debug.Log("AdvancingDialogue");
+        AdvanceDialogue();
+
 
     }
 
     public void AdvanceDialogue()
     {
-        ContinueButton.SetActive(false);
-        skippable = false;
-        if (currentDialogue == null)
+        if (willAdvanceDialogue)
         {
-            Debug.Log("currentDialogue is null");
-            return;
-        } 
-        currentLine++;
-        Debug.Log("Increased Current Line +1");
-        //advance currentdialogue to the next line here
+            ContinueButton.SetActive(false);
+            skippable = false;
+            if (currentDialogue == null)
+            {
+                Debug.Log("currentDialogue is null");
+                return;
+            } 
+            currentLine++;
+            Debug.Log("Increased Current Line +1");
+            //advance currentdialogue to the next line here
 
-        if (C_Typer != null)
-        {
-            return;
+            if (C_Typer != null)
+            {
+                return;
+            }
+            if (currentDialogue.lines.Length <= currentLine)
+            {
+                Debug.Log("This Dialogue is finished");
+                EndDialogue();
+                return;
+            }
+            dialogueText.text = "";
+            C_Typer = StartCoroutine(Typer(currentDialogue.lines[currentLine]));
         }
-        if (currentDialogue.lines.Length <= currentLine)
-        {
-            Debug.Log("This Dialogue is finished");
-            EndDialogue();
-            return;
-        }
-        dialogueText.text = "";
-        C_Typer = StartCoroutine(Typer(currentDialogue.lines[currentLine]));
+
     }
 
     IEnumerator Typer(LineLine line)
@@ -96,9 +99,8 @@ public class DialogueManager : MonoBehaviour
 
         C_Typer = null;
         skippable = true;
-        if (currentDialogue.lines.Length >= 1)
+        if (line.showContinueButton)
         {
-            Debug.Log("This Dialogue is longer than 1 step");
             ContinueButton.SetActive(true);
         }
         else
@@ -124,8 +126,12 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        currentDialogue.Complete(); //ERROR - THIS TRIGGERS THE NEXT SEQUENCE SOME HOW WHICH CAUSES THE CURRENT DIALOGUE TO SET NULL AND NEW DIALOGUE TO PLAY JUST BEFORE SETTING NULL
-        currentDialogue = null;
+        //ERROR - THIS TRIGGERS THE NEXT SEQUENCE SOME HOW WHICH CAUSES THE CURRENT DIALOGUE TO SET NULL AND NEW DIALOGUE TO PLAY JUST BEFORE SETTING NULL
+        //currentDialogue = null;
+        if (willAdvanceDialogue)
+        {
+            currentDialogue.Complete();
+        }
         currentLine = 0;
     }
     public void SetAdvanceDialogue(bool Advance)

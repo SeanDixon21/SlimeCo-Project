@@ -16,5 +16,4 @@ MonoBehaviour:
   - text: Each slime you send down the shipment pipe will be added to the customers
       package.
     audio: {fileID: 0}
-  - text: Just make sure to discard any sad slimes.
-    audio: {fileID: 0}
+    showContinueButton: 1

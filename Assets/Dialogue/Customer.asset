@@ -15,11 +15,7 @@ MonoBehaviour:
   lines:
   - text: Here is our first customer request of the day!
     audio: {fileID: 0}
+    showContinueButton: 1
   - text: Each customer gets 4 slimes of your choosing.
     audio: {fileID: 0}
-  - text: Each customer gets 4 slimes of your choosing.
-    audio: {fileID: 0}
-  - text: Each customer gets 4 slimes of your choosing.
-    audio: {fileID: 0}
-  - text: Each customer gets 4 slimes of your choosing.
-    audio: {fileID: 0}
+    showContinueButton: 1

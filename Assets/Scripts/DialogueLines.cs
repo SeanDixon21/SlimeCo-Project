@@ -19,5 +19,6 @@ public class DialogueLines : ScriptableObject
         [TextArea(2,4)]
         public string text;
         public AudioClip audio;
+        public bool showContinueButton;
     }
 }

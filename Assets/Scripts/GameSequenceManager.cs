@@ -85,8 +85,8 @@ public class GameSequenceManager : MonoBehaviour
     {
         ResultsPanel.SetActive(false);
         AdvanceSequence();
-        InstructionsFollowed = -1;
-        InstructionsNotFollowed = -1;
+        InstructionsFollowed = 0;
+        InstructionsNotFollowed = 0;
         willAdvanceSequence = true;
     }
     
@@ -100,22 +100,22 @@ public class GameSequenceManager : MonoBehaviour
     results ResultsTracker = new();
     public void SlimeEntered(bool isCorrect, string pipeExpectancy)
     {
-        if (isCorrect && pipeExpectancy == "GoodSlime")
+        if (willRespond && isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipGood++;
             InstructionsFollowed++;
         }
-        else if (!isCorrect && pipeExpectancy == "GoodSlime")
+        else if (willRespond && !isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipBad++;
             InstructionsNotFollowed++;
         }
-        else if (isCorrect && pipeExpectancy == "BadSlime")
+        else if (willRespond && isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabGood++;
             InstructionsFollowed++;
         }
-        else if (!isCorrect && pipeExpectancy == "BadSlime")
+        else if (willRespond && !isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabBad++;
             InstructionsNotFollowed++;
@@ -135,39 +135,19 @@ public class GameSequenceManager : MonoBehaviour
             failureLines.AddRange(failureLinesUsed);
             failureLinesUsed.Clear();
         }
-
+        
             if (willRespond && isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
             {
-                /*            //play RANDOM good line
-                            int index = UnityEngine.Random.Range(0, successLines.Count);
-                            dialogueManager.QueueDialogue(successLines[index]);
-                            successLinesUsed.Add(successLines[index]);
-                            successLines.RemoveAt(index);*/
-                dialogueManager.QueueDialogue(successLines[0]);
-                successLinesUsed.Add(successLines[0]);
-                successLines.RemoveAt(0);
-                AdvanceSequence();
+                WarnPlayer();
             }
             else if (willRespond && !isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
             {
-                /*            //play RANDOM bad line
-                            int index = UnityEngine.Random.Range(0, failureLines.Count);
-                            dialogueManager.QueueDialogue(failureLines[index]);
-                            failureLinesUsed.Add(failureLines[index]);
-                            failureLines.RemoveAt(index);*/
-                dialogueManager.QueueDialogue(failureLines[0]);
-                failureLinesUsed.Add(failureLines[0]);
-                failureLines.RemoveAt(0);
-                AdvanceSequence();
+                PraisePlayer();
             }
-/*            else
-            {
-            AdvanceSequence();
-            }*/
             else if (willAdvanceSequence)
-            {
-                AdvanceSequence();
-            }
+        {
+            AdvanceSequence();
+        }
         /*        if (currentStep >= sequence.Count)
                 {
                     slimeSpawner.SpawnSlimeRandom();
@@ -176,7 +156,21 @@ public class GameSequenceManager : MonoBehaviour
 
     // PUBLIC FUNCTION - Can also be called by UI buttons.
 
+    public void PraisePlayer()
+    {
+        dialogueManager.QueueDialogue(failureLines[0]);
+        failureLinesUsed.Add(failureLines[0]);
+        failureLines.RemoveAt(0);
+        dialogueManager.AdvanceDialogue();
+    }
 
+    public void WarnPlayer()
+    {
+        dialogueManager.QueueDialogue(successLines[0]);
+        successLinesUsed.Add(successLines[0]);
+        successLines.RemoveAt(0);
+        dialogueManager.AdvanceDialogue();
+    }
 
 
     public void ShowResults()
@@ -255,7 +249,7 @@ public class GameSequenceManager : MonoBehaviour
         return currentStep;
     }
 
-/*    public void StartCustomers()
+    public void StartCustomers()
     {
         CustomerWindow.SetActive(true);
     }
@@ -265,11 +259,11 @@ public class GameSequenceManager : MonoBehaviour
     }
 
     public void SetResponse(bool Respond)
-    { 
+    {
         willRespond = Respond;
     }
     public void SetAdvanceSequence(bool Advance)
     {
         willAdvanceSequence = Advance;
-    }*/
+    }
 }

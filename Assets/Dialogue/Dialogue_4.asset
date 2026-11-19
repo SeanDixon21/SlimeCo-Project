@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dialogue_4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Thank you for playing (Temp Ending)
+  - text: Good luck ;)
     audio: {fileID: 0}
+    showContinueButton: 0

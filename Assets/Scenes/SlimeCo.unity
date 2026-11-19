@@ -992,14 +992,26 @@ MonoBehaviour:
   sequence:
   - eventType: 0
     lines: {fileID: 11400000, guid: a0795dfaed74c3842a7f48b442be9f2e, type: 2}
-    slimePrefabIndex: 2
+    slimePrefabIndex: 0
     targetObject: {fileID: 0}
     setActive: 0
     customEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: SetResponse
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventType: 3
-    lines: {fileID: 11400000, guid: 56edd0357c6e3474ab3669cc3da3ef03, type: 2}
+    lines: {fileID: 11400000, guid: 25b157158b5ba874ea1bd5398ad4b022, type: 2}
     slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
@@ -1011,7 +1023,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 56edd0357c6e3474ab3669cc3da3ef03, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 25b157158b5ba874ea1bd5398ad4b022, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1062,11 +1074,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventType: 0
+  - eventType: 3
     lines: {fileID: 11400000, guid: 3bb4c0f943461134e9bd529ec5849d14, type: 2}
     slimePrefabIndex: 2
     targetObject: {fileID: 0}
-    setActive: 0
+    setActive: 1
     customEvent:
       m_PersistentCalls:
         m_Calls:
@@ -1075,13 +1087,109 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 3bb4c0f943461134e9bd529ec5849d14, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: ShowButtons
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: SetResponse
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventType: 3
+    lines: {fileID: 11400000, guid: c61af8e6691017446ba372f23f182746, type: 2}
+    slimePrefabIndex: 2
+    targetObject: {fileID: 0}
+    setActive: 1
+    customEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1365073679}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: QueueDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: c61af8e6691017446ba372f23f182746, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventType: 3
+    lines: {fileID: 11400000, guid: 0a657c5f01f8bac4d81fa0858e36bdb7, type: 2}
+    slimePrefabIndex: 2
+    targetObject: {fileID: 0}
+    setActive: 1
+    customEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1365073679}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: QueueDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 512e26cd508904740a0a880ccf1e3388, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1365073679}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: SetAdvanceDialogue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 425107954}
+          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+          m_MethodName: SetAdvanceSequence
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventType: 0
+    lines: {fileID: 11400000, guid: 0a657c5f01f8bac4d81fa0858e36bdb7, type: 2}
+    slimePrefabIndex: 2
+    targetObject: {fileID: 0}
+    setActive: 1
+    customEvent:
+      m_PersistentCalls:
+        m_Calls: []
   successLines:
   - {fileID: 11400000, guid: 7743772a77c209b408bdfc532517690d, type: 2}
   - {fileID: 11400000, guid: 3f7472fe395057d41b1717ab0830b844, type: 2}
@@ -1106,7 +1214,7 @@ MonoBehaviour:
   InstructionsNotFollowed: 0
   CustomerWindow: {fileID: 904881146}
   SlimeButons: {fileID: 600248579}
-  willRespond: 0
+  willRespond: 1
   willAdvanceSequence: 0
 --- !u!4 &425107955
 Transform:
@@ -1144,6 +1252,12 @@ MonoBehaviour:
   CustomerIndex: 0
   RequestCounter: {fileID: 1587975278}
   slimeCounter: 0
+  CustomerSatisfaction:
+    m_PersistentCalls:
+      m_Calls: []
+  DeliveredAll:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &435874374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,6 +2986,36 @@ MonoBehaviour:
   CustomerIndex: 0
   RequestCounter: {fileID: 1587975278}
   slimeCounter: 0
+  CustomerSatisfaction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 425107954}
+        m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+        m_MethodName: PraisePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeliveredAll:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 425107954}
+        m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
+        m_MethodName: AdvanceSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &904881149
 MonoBehaviour:
   m_ObjectHideFlags: 0

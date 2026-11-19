@@ -67,7 +67,7 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] GameObject CustomerWindow;
     [SerializeField] GameObject SlimeButons;
     [SerializeField] bool willRespond;
-    [SerializeField] bool willAdvanceSequence;
+    [SerializeField] bool willAdvanceSequence = false;
 
     private void OnEnable()
     {
@@ -160,14 +160,14 @@ public class GameSequenceManager : MonoBehaviour
                 failureLines.RemoveAt(0);
                 AdvanceSequence();
             }
-            else
+/*            else
             {
             AdvanceSequence();
-            }
-/*            else if (willAdvanceSequence)
+            }*/
+            else if (willAdvanceSequence)
             {
                 AdvanceSequence();
-            }*/
+            }
         /*        if (currentStep >= sequence.Count)
                 {
                     slimeSpawner.SpawnSlimeRandom();

@@ -15,3 +15,5 @@ MonoBehaviour:
   lines:
   - text: Here's your first slime!
     audio: {fileID: 8300000, guid: b4dd8fd7c0c83204dbfccbc1a8f75082, type: 3}
+  - text: again
+    audio: {fileID: 0}

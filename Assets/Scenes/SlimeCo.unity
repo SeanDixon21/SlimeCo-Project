@@ -999,7 +999,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - eventType: 3
-    lines: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
+    lines: {fileID: 11400000, guid: 56edd0357c6e3474ab3669cc3da3ef03, type: 2}
     slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 56edd0357c6e3474ab3669cc3da3ef03, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1062,8 +1062,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventType: 3
-    lines: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
+  - eventType: 0
+    lines: {fileID: 11400000, guid: 3bb4c0f943461134e9bd529ec5849d14, type: 2}
     slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 0
@@ -1078,18 +1078,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 11400000, guid: d4ca08ef750d45b4cbfdfe1d956f02b3, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 425107954}
-          m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
-          m_MethodName: StartCustomers
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

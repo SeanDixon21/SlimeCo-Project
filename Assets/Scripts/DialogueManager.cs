@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = "";
             currentDialogue = lines;
             currentLine = -1;
+            Debug.Log("AdvancingDialogue");
             AdvanceDialogue();
         }
 
@@ -44,8 +45,13 @@ public class DialogueManager : MonoBehaviour
     {
         ContinueButton.SetActive(false);
         skippable = false;
-        if (currentDialogue == null) return;
+        if (currentDialogue == null)
+        {
+            Debug.Log("currentDialogue is null");
+            return;
+        } 
         currentLine++;
+        Debug.Log("Increased Current Line +1");
         //advance currentdialogue to the next line here
 
         if (C_Typer != null)
@@ -54,6 +60,7 @@ public class DialogueManager : MonoBehaviour
         }
         if (currentDialogue.lines.Length <= currentLine)
         {
+            Debug.Log("This Dialogue is finished");
             EndDialogue();
             return;
         }
@@ -89,8 +96,9 @@ public class DialogueManager : MonoBehaviour
 
         C_Typer = null;
         skippable = true;
-        if (currentDialogue.lines.Length > 1)
+        if (currentDialogue.lines.Length >= 1)
         {
+            Debug.Log("This Dialogue is longer than 1 step");
             ContinueButton.SetActive(true);
         }
         else
@@ -116,7 +124,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        currentDialogue.Complete();
+        currentDialogue.Complete(); //ERROR - THIS TRIGGERS THE NEXT SEQUENCE SOME HOW WHICH CAUSES THE CURRENT DIALOGUE TO SET NULL AND NEW DIALOGUE TO PLAY JUST BEFORE SETTING NULL
         currentDialogue = null;
         currentLine = 0;
     }

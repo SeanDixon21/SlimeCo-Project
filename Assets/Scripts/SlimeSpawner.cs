@@ -13,7 +13,7 @@ public class SlimeSpawner : MonoBehaviour
 
     [Header("Spawn Point")]
     public Transform spawnPoint;
-
+    [SerializeField] private bool slimeCurrentSpawned = false;
     private readonly List<SlimeCollision> spawnedSlimes =
         new List<SlimeCollision>();
 
@@ -29,6 +29,20 @@ public class SlimeSpawner : MonoBehaviour
     public void SpawnSlimeRandom()
     {
         SpawnSlime(Random.Range(0, slimePrefabs.Length));
+    }
+    public void buttonSpawnSlime(int chosenslime)
+    {
+        if (slimeCurrentSpawned == false)
+        { 
+            SpawnSlime(Random.Range(0,2) == 0 ? 0 : chosenslime);
+            slimeCurrentSpawned = true;
+            return;
+        }
+        
+    }
+    public void despawnSlime()
+    {
+        slimeCurrentSpawned = false;
     }
 
     // PUBLIC FUNCTION - Can be called by UI buttons.

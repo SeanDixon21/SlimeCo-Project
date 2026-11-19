@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
 
     public DialogueLines currentDialogue;
-    private int currentLine = 0;
+    [SerializeField]private int currentLine = 0;
     [SerializeField] private bool skippable;
     [SerializeField] private bool finishTyping = false;
     Coroutine C_Typer;
@@ -79,7 +79,14 @@ public class DialogueManager : MonoBehaviour
 
         C_Typer = null;
         skippable = true;
-        ContinueButton.SetActive(true);
+        if (currentDialogue.lines.Length > 1)
+        {
+            ContinueButton.SetActive(true);
+        }
+        else
+        {
+            skippable = false;
+        }
     }
 
     public void Update()

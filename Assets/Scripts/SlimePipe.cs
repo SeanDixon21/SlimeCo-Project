@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class SlimePipe : MonoBehaviour
 {
+
+    public UnityEvent PipeTriggerd;
     private enum SlimeTagEnum
     {
         GoodSlime,
@@ -43,6 +45,7 @@ public class SlimePipe : MonoBehaviour
             // Destroy the slime.
             Destroy(slimeObject);
             PipeThwop.Play();
+            PipeTriggerd.Invoke();
         }
     }
 }

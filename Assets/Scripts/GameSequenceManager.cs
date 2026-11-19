@@ -60,6 +60,8 @@ public class GameSequenceManager : MonoBehaviour
     public List<DialogueLines> successLines, failureLines;
     [SerializeField] List<DialogueLines> successLinesUsed = new();
     [SerializeField] List<DialogueLines> failureLinesUsed = new();
+    [SerializeField] private int InstructionsFollowed = 0;
+    [SerializeField] private int InstructionsNotFollowed = 0;
 
     private int currentStep = 0;
 
@@ -79,6 +81,8 @@ public class GameSequenceManager : MonoBehaviour
     {
         ResultsPanel.SetActive(false);
         AdvanceSequence();
+        InstructionsFollowed = -1;
+        InstructionsNotFollowed = -1;
     }
     
     void Update()
@@ -94,25 +98,24 @@ public class GameSequenceManager : MonoBehaviour
         if (isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipGood++;
-            Debug.Log(isCorrect);
-            Debug.Log(pipeExpectancy);
-            Debug.Log(ResultsTracker.ShipGood);
+            InstructionsFollowed++;
         }
         else if (!isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipBad++;
-            Debug.Log(ResultsTracker.ShipBad);
+            InstructionsNotFollowed++;
         }
         else if (isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabGood++;
-            Debug.Log(ResultsTracker.RehabGood);
+            InstructionsFollowed++;
         }
         else if (!isCorrect && pipeExpectancy == "BadSlime")
         {
             ResultsTracker.RehabBad++;
-            Debug.Log(ResultsTracker.RehabBad);
+            InstructionsNotFollowed++;
         }
+        
 
 
         if (successLines.Count == 0)
@@ -128,27 +131,38 @@ public class GameSequenceManager : MonoBehaviour
             failureLinesUsed.Clear();
         }
 
-        if (isCorrect)
-        {
-            //play good line
-            int index = UnityEngine.Random.Range(0, successLines.Count);
-            dialogueManager.QueueDialogue(successLines[index]);
-            successLinesUsed.Add(successLines[index]);
-            successLines.RemoveAt(index);
-
-        }
-        else
-        {
-            //play bad line
-            int index = UnityEngine.Random.Range(0, failureLines.Count);
-            dialogueManager.QueueDialogue(failureLines[index]);
-            failureLinesUsed.Add(failureLines[index]);
-            failureLines.RemoveAt(index);
-        }
-/*        if (currentStep >= sequence.Count)
-        {
-            slimeSpawner.SpawnSlimeRandom();
-        }*/
+            if (isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
+            {
+                /*            //play RANDOM good line
+                            int index = UnityEngine.Random.Range(0, successLines.Count);
+                            dialogueManager.QueueDialogue(successLines[index]);
+                            successLinesUsed.Add(successLines[index]);
+                            successLines.RemoveAt(index);*/
+                dialogueManager.QueueDialogue(successLines[0]);
+                successLinesUsed.Add(successLines[0]);
+                successLines.RemoveAt(0);
+                AdvanceSequence();
+            }
+            else if (!isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
+            {
+                /*            //play RANDOM bad line
+                            int index = UnityEngine.Random.Range(0, failureLines.Count);
+                            dialogueManager.QueueDialogue(failureLines[index]);
+                            failureLinesUsed.Add(failureLines[index]);
+                            failureLines.RemoveAt(index);*/
+                dialogueManager.QueueDialogue(failureLines[0]);
+                failureLinesUsed.Add(failureLines[0]);
+                failureLines.RemoveAt(0);
+                AdvanceSequence();
+            }
+            else
+            {
+                AdvanceSequence();
+            }
+        /*        if (currentStep >= sequence.Count)
+                {
+                    slimeSpawner.SpawnSlimeRandom();
+                }*/
     }
 
     // PUBLIC FUNCTION - Can also be called by UI buttons.

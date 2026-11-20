@@ -67,7 +67,7 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] GameObject CustomerWindow;
     [SerializeField] GameObject SlimeButons;
     [SerializeField] bool willRespond;
-    [SerializeField] bool willAdvanceSequence = false;
+    [SerializeField] public bool willAdvanceSequence = false;
     [SerializeField] public int slimeCount;
 
     private void OnEnable()

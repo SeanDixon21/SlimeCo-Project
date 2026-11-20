@@ -134,7 +134,7 @@ public class DialogueManager : MonoBehaviour
     {
         //ERROR - THIS TRIGGERS THE NEXT SEQUENCE SOME HOW WHICH CAUSES THE CURRENT DIALOGUE TO SET NULL AND NEW DIALOGUE TO PLAY JUST BEFORE SETTING NULL
         //currentDialogue = null;
-        if (willAdvanceDialogue)
+        if (willAdvanceDialogue && gameManager.willAdvanceSequence == true)
         {
             currentDialogue.Complete();
         }

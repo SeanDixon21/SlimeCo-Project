@@ -1023,7 +1023,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: cd750bdb95ea872409b43fdfd39d0459, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 3a33319bdb423f445ad981fe28466be8, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1033,6 +1033,18 @@ MonoBehaviour:
         - m_Target: {fileID: 301670051}
           m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
           m_MethodName: SpawnSlime
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1365073678}
+          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
+          m_MethodName: 
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1143,7 +1155,7 @@ MonoBehaviour:
           m_MethodName: QueueDialogue
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 28e7b1af7f44d4f45bbff2c5bad1fb25, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: d5353f078fa8098428bf54529f0205e8, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueLines, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1151,7 +1163,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - eventType: 3
-    lines: {fileID: 11400000, guid: 0a657c5f01f8bac4d81fa0858e36bdb7, type: 2}
+    lines: {fileID: 0}
     slimePrefabIndex: 2
     targetObject: {fileID: 0}
     setActive: 1
@@ -1180,7 +1192,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 425107954}
           m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
@@ -4178,7 +4190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   dialogueText: {fileID: 1761715945}
   currentDialogue: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 425107954}
   currentLine: 0
   skippable: 0
   finishTyping: 0

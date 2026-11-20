@@ -9,9 +9,11 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
 
     public DialogueLines currentDialogue;
+    public GameSequenceManager gameManager;
     [SerializeField]private int currentLine = 0;
-    [SerializeField] private bool skippable;
+    [SerializeField] public bool skippable;
     [SerializeField] private bool finishTyping = false;
+    //[SerializeField] private bool allowtoContinue = false;
     Coroutine C_Typer;
     public AudioSource source;
     public GameObject ContinueButton;
@@ -99,9 +101,13 @@ public class DialogueManager : MonoBehaviour
 
         C_Typer = null;
         skippable = true;
-        if (line.showContinueButton)
+        if (line.showContinueButton /*&& allowtoContinue*/)
         {
             ContinueButton.SetActive(true);
+        }
+        else if (gameManager.slimeCount == 1)
+        {
+            skippable = true;
         }
         else
         {
@@ -137,5 +143,14 @@ public class DialogueManager : MonoBehaviour
     public void SetAdvanceDialogue(bool Advance)
     {
         willAdvanceDialogue = Advance;
+    }
+    /*    public void FlipContinuationPermission(bool allowtoContinue)
+        {
+            allowtoContinue = !allowtoContinue;
+        }*/
+
+    public void ShowContinueButton()
+    {
+        ContinueButton.SetActive(true);
     }
 }

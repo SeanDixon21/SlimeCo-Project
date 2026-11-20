@@ -15,3 +15,4 @@ MonoBehaviour:
   lines:
   - text: Oh careful, that tube is only for slimes that need rehabilitation.
     audio: {fileID: 8300000, guid: 9b731552637d668488dee1a77d3cb2f9, type: 3}
+    showContinueButton: 0

@@ -42,7 +42,7 @@ public class GameSequenceManager : MonoBehaviour
     public SlimeSpawner slimeSpawner;
 
     public List<TMP_Text> ListofTexts;
-    public GameObject ResultsPanel; 
+    public GameObject ResultsPanel;
 
     private struct results
     {
@@ -68,6 +68,7 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] GameObject SlimeButons;
     [SerializeField] bool willRespond;
     [SerializeField] bool willAdvanceSequence = false;
+    [SerializeField] public int slimeCount;
 
     private void OnEnable()
     {
@@ -85,11 +86,11 @@ public class GameSequenceManager : MonoBehaviour
     {
         ResultsPanel.SetActive(false);
         AdvanceSequence();
-        InstructionsFollowed = 0;
-        InstructionsNotFollowed = 0;
+        InstructionsFollowed = -1;
+        InstructionsNotFollowed = -1;
         willAdvanceSequence = true;
     }
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -100,6 +101,7 @@ public class GameSequenceManager : MonoBehaviour
     results ResultsTracker = new();
     public void SlimeEntered(bool isCorrect, string pipeExpectancy)
     {
+        slimeCount++;
         if (willRespond && isCorrect && pipeExpectancy == "GoodSlime")
         {
             ResultsTracker.ShipGood++;
@@ -120,7 +122,7 @@ public class GameSequenceManager : MonoBehaviour
             ResultsTracker.RehabBad++;
             InstructionsNotFollowed++;
         }
-        
+
 
 
         if (successLines.Count == 0)
@@ -135,16 +137,18 @@ public class GameSequenceManager : MonoBehaviour
             failureLines.AddRange(failureLinesUsed);
             failureLinesUsed.Clear();
         }
-        
-            if (willRespond && isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
-            {
-                WarnPlayer();
-            }
-            else if (willRespond && !isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
-            {
-                PraisePlayer();
-            }
-            else if (willAdvanceSequence)
+
+        if (willRespond && isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
+        {
+            PraisePlayer();
+            Debug.Log("Praise Player");
+        }
+        else if (willRespond && !isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
+        {
+            WarnPlayer();
+            Debug.Log("Warn Player");
+        }
+        else if (willAdvanceSequence)
         {
             AdvanceSequence();
         }
@@ -158,17 +162,24 @@ public class GameSequenceManager : MonoBehaviour
 
     public void PraisePlayer()
     {
-        dialogueManager.QueueDialogue(failureLines[0]);
-        failureLinesUsed.Add(failureLines[0]);
-        failureLines.RemoveAt(0);
+        dialogueManager.QueueDialogue(successLines[0]);
+        successLinesUsed.Add(successLines[0]);
+        successLines.RemoveAt(0);
         dialogueManager.AdvanceDialogue();
+
+        if (slimeCount == 1)
+        {
+            dialogueManager.ShowContinueButton();
+            //dialogueManager.skippable = true;
+        }
     }
 
     public void WarnPlayer()
     {
-        dialogueManager.QueueDialogue(successLines[0]);
-        successLinesUsed.Add(successLines[0]);
-        successLines.RemoveAt(0);
+
+        dialogueManager.QueueDialogue(failureLines[0]);
+        failureLinesUsed.Add(failureLines[0]);
+        failureLines.RemoveAt(0);
         dialogueManager.AdvanceDialogue();
     }
 
@@ -252,6 +263,8 @@ public class GameSequenceManager : MonoBehaviour
     public void StartCustomers()
     {
         CustomerWindow.SetActive(true);
+        InstructionsFollowed = -1;
+        InstructionsNotFollowed = -1;
     }
     public void ShowButtons()
     {
@@ -266,4 +279,8 @@ public class GameSequenceManager : MonoBehaviour
     {
         willAdvanceSequence = Advance;
     }
+
+    
+
+
 }

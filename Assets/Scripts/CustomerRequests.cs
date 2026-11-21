@@ -13,6 +13,8 @@ public class CustomerRequests : MonoBehaviour
     [SerializeField] int slimeCounter = 0;
     public UnityEvent CustomerSatisfaction;
     public UnityEvent DeliveredAll;
+    [SerializeField] AudioSource smallDing;
+    [SerializeField] AudioSource largeDing;
 
     public void Start()
     {
@@ -23,7 +25,7 @@ public class CustomerRequests : MonoBehaviour
     {
         // Deactivate the current customer
         Customers[CustomerIndex].SetActive(false);
-        if (CustomerIndex < Customers.Length)
+        if (CustomerIndex < 4)
         {
             // Move to the next customer
             CustomerIndex++;
@@ -42,8 +44,13 @@ public class CustomerRequests : MonoBehaviour
         slimeCounter++;
         RequestCounter.SetText(slimeCounter.ToString()+" / 4");
 
-        if (slimeCounter == 4)
+        if (slimeCounter < 4)
         {
+            smallDing.Play();
+        }
+        else if (slimeCounter == 4)
+        {
+            largeDing.Play();
             CustomerSatisfaction.Invoke(); //Praise player for completing customer
             NextCustomer();
             slimeCounter = 0;

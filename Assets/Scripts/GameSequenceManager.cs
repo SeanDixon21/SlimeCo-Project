@@ -69,6 +69,8 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] bool willRespond;
     [SerializeField] public bool willAdvanceSequence = false;
     [SerializeField] public int slimeCount;
+    [SerializeField] int badSlimesShipped;
+    //[SerializeField] int badSlimesShipped;
 
     private void OnEnable()
     {
@@ -102,25 +104,27 @@ public class GameSequenceManager : MonoBehaviour
     public void SlimeEntered(bool isCorrect, string pipeExpectancy)
     {
         slimeCount++;
-        if (willRespond && isCorrect && pipeExpectancy == "GoodSlime")
+        if (willRespond && isCorrect && pipeExpectancy == "GoodSlime") // Good Slimes in Shipping Pipe
         {
             ResultsTracker.ShipGood++;
             InstructionsFollowed++;
         }
-        else if (willRespond && !isCorrect && pipeExpectancy == "GoodSlime")
+        else if (willRespond && !isCorrect && pipeExpectancy == "GoodSlime") // Good Slimes in Rehab Pipe
         {
             ResultsTracker.ShipBad++;
             InstructionsNotFollowed++;
+            badSlimesShipped++;
         }
-        else if (willRespond && isCorrect && pipeExpectancy == "BadSlime")
+        else if (willRespond && isCorrect && pipeExpectancy == "BadSlime") //Bad Slimes in Rehab Pipe
         {
             ResultsTracker.RehabGood++;
             InstructionsFollowed++;
         }
-        else if (willRespond && !isCorrect && pipeExpectancy == "BadSlime")
+        else if (willRespond && !isCorrect && pipeExpectancy == "BadSlime") // Bad Slimes in Shipping
         {
             ResultsTracker.RehabBad++;
             InstructionsNotFollowed++;
+            badSlimesShipped++;
         }
 
 
@@ -138,12 +142,12 @@ public class GameSequenceManager : MonoBehaviour
             failureLinesUsed.Clear();
         }
 
-        if (willRespond && isCorrect && (InstructionsFollowed == 0 || InstructionsFollowed % 2 == 0))
+        if (willRespond && isCorrect && (InstructionsFollowed == 0 /*|| InstructionsFollowed % 2 == 0*/))
         {
             PraisePlayer();
             Debug.Log("Praise Player");
         }
-        else if (willRespond && !isCorrect && (InstructionsNotFollowed == 0 || InstructionsNotFollowed % 2 == 0))
+        else if (willRespond && !isCorrect && (badSlimesShipped == 0 || badSlimesShipped % 2 == 0))
         {
             WarnPlayer();
             Debug.Log("Warn Player");
@@ -260,11 +264,11 @@ public class GameSequenceManager : MonoBehaviour
         return currentStep;
     }
 
-    public void StartCustomers()
+    public void ToggleCustomers()
     {
-        CustomerWindow.SetActive(true);
-        InstructionsFollowed = -1;
-        InstructionsNotFollowed = -1;
+        CustomerWindow.SetActive(!CustomerWindow);
+        //InstructionsFollowed = -1;
+        //InstructionsNotFollowed = -1;
     }
     public void ShowButtons()
     {

@@ -35,7 +35,7 @@ public class SlimeSpawner : MonoBehaviour
     {
         if (slimeCurrentSpawned == false)
         { 
-            SpawnSlime(Random.Range(0,2) == 0 ? 0 : chosenslime);
+            SpawnSlime(Random.Range(0,3) == 0 ? 0 : chosenslime);
             slimeCurrentSpawned = true;
             return;
         }

@@ -15,3 +15,4 @@ MonoBehaviour:
   lines:
   - text: You've got this!
     audio: {fileID: 8300000, guid: 132af223424cc4f43a741c64b3893266, type: 3}
+    showContinueButton: 0

@@ -962,6 +962,8 @@ GameObject:
   - component: {fileID: 425107955}
   - component: {fileID: 425107954}
   - component: {fileID: 425107956}
+  - component: {fileID: 425107958}
+  - component: {fileID: 425107957}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1033,18 +1035,6 @@ MonoBehaviour:
         - m_Target: {fileID: 301670051}
           m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
           m_MethodName: SpawnSlime
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1365073678}
-          m_TargetAssemblyTypeName: SlimeSpawner, Assembly-CSharp
-          m_MethodName: 
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1216,6 +1206,7 @@ MonoBehaviour:
         m_Calls: []
   successLines:
   - {fileID: 11400000, guid: 7743772a77c209b408bdfc532517690d, type: 2}
+  - {fileID: 11400000, guid: c16bdaf66d432cb46a404f61a674695f, type: 2}
   - {fileID: 11400000, guid: 3f7472fe395057d41b1717ab0830b844, type: 2}
   - {fileID: 11400000, guid: e2df18c40b606cc42a5965b39fba516a, type: 2}
   - {fileID: 11400000, guid: cb4326586551732468dd65ed4d5e9904, type: 2}
@@ -1241,6 +1232,7 @@ MonoBehaviour:
   willRespond: 1
   willAdvanceSequence: 0
   slimeCount: 0
+  badSlimesShipped: 0
 --- !u!4 &425107955
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,8 +1297,204 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+  smallDing: {fileID: 425107958}
+  largeDing: {fileID: 425107957}
+--- !u!82 &425107957
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425107953}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c2f9249a22fd64f4bb6218dad25a6836, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &425107958
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425107953}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 7a4f68af610aaf543a462021dede8876, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &435874374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,7 +2260,7 @@ GameObject:
   - component: {fileID: 573813282}
   - component: {fileID: 573813281}
   m_Layer: 5
-  m_Name: Positivity (1)
+  m_Name: Happiness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2981,7 +3169,6 @@ GameObject:
   - component: {fileID: 904881147}
   - component: {fileID: 904881150}
   - component: {fileID: 904881149}
-  - component: {fileID: 904881148}
   m_Layer: 5
   m_Name: CustomerWindow
   m_TagString: Untagged
@@ -3014,57 +3201,6 @@ RectTransform:
   m_AnchoredPosition: {x: 562.5, y: 295.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &904881148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904881146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39140f44c0e66ed43b827f95c5c848ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CustomerRequests
-  Customers:
-  - {fileID: 1084760792}
-  - {fileID: 765563620}
-  - {fileID: 856367955}
-  - {fileID: 202890116}
-  - {fileID: 959093209}
-  CustomerIndex: 0
-  RequestCounter: {fileID: 1587975278}
-  slimeCounter: 0
-  CustomerSatisfaction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 425107954}
-        m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
-        m_MethodName: PraisePlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DeliveredAll:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 425107954}
-        m_TargetAssemblyTypeName: GameSequenceManager, Assembly-CSharp
-        m_MethodName: AdvanceSequence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &904881149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3434,7 +3570,7 @@ GameObject:
   - component: {fileID: 1014614395}
   - component: {fileID: 1014614394}
   m_Layer: 5
-  m_Name: Positivity (3)
+  m_Name: Hope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3566,7 +3702,7 @@ GameObject:
   - component: {fileID: 1050768680}
   - component: {fileID: 1050768679}
   m_Layer: 5
-  m_Name: Positivity (2)
+  m_Name: Love
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4211,8 +4347,8 @@ RectTransform:
   m_Children:
   - {fileID: 12948626}
   - {fileID: 904881147}
-  - {fileID: 1814462715}
   - {fileID: 600248580}
+  - {fileID: 1814462715}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

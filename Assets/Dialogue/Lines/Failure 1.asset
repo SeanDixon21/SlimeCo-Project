@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Failure 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Oh careful, that tube is only for slimes that need rehabilitation.
-    audio: {fileID: 8300000, guid: 9b731552637d668488dee1a77d3cb2f9, type: 3}
+  - text: Oh careful, that slime wasnt put in the right tube.
+    audio: {fileID: 0}
     showContinueButton: 0

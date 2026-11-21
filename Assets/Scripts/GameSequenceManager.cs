@@ -43,6 +43,7 @@ public class GameSequenceManager : MonoBehaviour
 
     public List<TMP_Text> ListofTexts;
     public GameObject ResultsPanel;
+    [SerializeField] AudioSource paperPeel;
 
     private struct results
     {
@@ -297,6 +298,10 @@ public class GameSequenceManager : MonoBehaviour
     {
         // Deactivate the current customer
         Posters[PosterIndex].SetActive(false);
+        if (PosterIndex < 9)
+        {
+            paperPeel.Play(); 
+        }    
         if (PosterIndex < 10)
         {
             // Move to the next customer

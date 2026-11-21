@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Dialogue_5
+  m_Name: Restart 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Thank you for playing (Temp Ending)
+  - text: 'Stand by for reprogramming.... '
     audio: {fileID: 0}
+    showContinueButton: 1

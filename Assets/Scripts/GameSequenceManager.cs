@@ -266,7 +266,12 @@ public class GameSequenceManager : MonoBehaviour
 
     public void ToggleCustomers()
     {
-        CustomerWindow.SetActive(!CustomerWindow);
+/*        if (CustomerWindow.activeSelf)
+        {
+            CustomerWindow.SetActive(false);
+        }
+        else if (CustomerWindow.!activeSelf)*/
+        CustomerWindow.SetActive(!CustomerWindow.activeSelf);
         //InstructionsFollowed = -1;
         //InstructionsNotFollowed = -1;
     }
@@ -284,7 +289,29 @@ public class GameSequenceManager : MonoBehaviour
         willAdvanceSequence = Advance;
     }
 
-    
+
+    //Poster Function for the reveal
+    public GameObject[] Posters = new GameObject[0];
+    [SerializeField] int PosterIndex = -1;
+    public void NextPoster()
+    {
+        // Deactivate the current customer
+        Posters[PosterIndex].SetActive(false);
+        if (PosterIndex < 10)
+        {
+            // Move to the next customer
+            PosterIndex++;
+
+            // Activate the next customer
+            Posters[PosterIndex].SetActive(true);
+        }
+/*        else //triggers at end of all customers
+        {
+            DeliveredAll.Invoke();
+        }*/
+    }
+
+
 
 
 }

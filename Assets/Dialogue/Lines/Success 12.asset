@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Failure 4
+  m_Name: Success 12
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Maybe we need to get a clearer sign put on that tube.
-    audio: {fileID: 8300000, guid: 5bd6d39896e7d5d49a155054eaef1ae4, type: 3}
+  - text: Our customers will be so happy!
+    audio: {fileID: 0}
+    showContinueButton: 0

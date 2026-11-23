@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Failure 8
+  m_Name: GoodSlimeFailure 9
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: The job may be simple but its important to get right.
-    audio: {fileID: 8300000, guid: 7ea6fb8dd75d21b4f97a1b83393bfca7, type: 3}
+  - text: I'm beginning to think the signs aren't the problem.
+    audio: {fileID: 0}
+    showContinueButton: 0

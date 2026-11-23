@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Success 9
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Great Start!
+  - text: You are our best employee yet!
     audio: {fileID: 0}
     showContinueButton: 0

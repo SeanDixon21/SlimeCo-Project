@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Success 6
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Just think of all the lives you are helping.
-    audio: {fileID: 8300000, guid: 0fdd92ed179d9c64da12eaddce2bc4ac, type: 3}
+  - text: Aww, a new little friend! Everyone deserves someone to keep them company.
+    audio: {fileID: 0}
+    showContinueButton: 0

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Success 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: You are our best employee yet!
-    audio: {fileID: 8300000, guid: 3c50c3709902cc24b89f7f431b530781, type: 3}
+  - text: It's so heartwarming to see how much joy our little friends bring to families
+      during such dark times.
+    audio: {fileID: 0}
+    showContinueButton: 0

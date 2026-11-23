@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Success 5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: We may have to consider a pay rise.
-    audio: {fileID: 8300000, guid: 4b113e96dd4520f438cdae3737988fa2, type: 3}
+  - text: It's so heartwarming to see how much joy our little friends bring to families
+      during such dark times.
+    audio: {fileID: 0}
+    showContinueButton: 0

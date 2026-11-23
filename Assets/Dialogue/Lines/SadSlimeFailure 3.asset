@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Failure 7
+  m_Name: SadSlimeFailure 3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Did you say you had prior experience?
-    audio: {fileID: 8300000, guid: d2ac104514366434487fed4e58cb2a68, type: 3}
+  - text: We dont want customers feeling sad.
+    audio: {fileID: 0}
+    showContinueButton: 0

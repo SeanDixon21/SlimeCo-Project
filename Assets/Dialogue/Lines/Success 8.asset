@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Success 8
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Nomiation for employee of the month incoming!
-    audio: {fileID: 8300000, guid: 70621e0d34cddb34abe13dca74b2fbec, type: 3}
+  - text: Good Job!
+    audio: {fileID: 0}
+    showContinueButton: 0

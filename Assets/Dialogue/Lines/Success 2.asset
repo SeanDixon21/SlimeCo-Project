@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Success 2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: You've got this!
-    audio: {fileID: 8300000, guid: 132af223424cc4f43a741c64b3893266, type: 3}
+  - text: Aw, how sweet! It's important to make time for the ones we love, no matter
+      how busy we are!
+    audio: {fileID: 0}
     showContinueButton: 0

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Failure 3
+  m_Name: Success 13
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: We dont want customers feeling sad.
-    audio: {fileID: 8300000, guid: 6cc1b4ebb7e985f4d85bbfc44cd6f0ab, type: 3}
+  - text: Nomiation for employee of the month incoming!
+    audio: {fileID: 0}
+    showContinueButton: 0

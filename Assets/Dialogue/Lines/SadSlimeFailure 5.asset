@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da3571184c886394088648833b71ce92, type: 3}
-  m_Name: Failure 6
+  m_Name: SadSlimeFailure 5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Just a heads up, your performance may imapct your pay review.
-    audio: {fileID: 8300000, guid: 8e3cfcddcc3647d438a27cee760aedc7, type: 3}
+  - text: Oh dear, that one wasn't quite ready for shipping.
+    audio: {fileID: 0}
+    showContinueButton: 0

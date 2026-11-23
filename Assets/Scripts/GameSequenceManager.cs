@@ -58,9 +58,10 @@ public class GameSequenceManager : MonoBehaviour
     [Header("Sequence Settings")]
     public List<SequenceStep> sequence = new List<SequenceStep>();
 
-    public List<DialogueLines> successLines, failureLines;
+    public List<DialogueLines> successLines, failureSadSlimeLines, failureGoodSlimeLines;
     [SerializeField] List<DialogueLines> successLinesUsed = new();
-    [SerializeField] List<DialogueLines> failureLinesUsed = new();
+    [SerializeField] List<DialogueLines> failureSadSlimeLinesUsed = new();
+    [SerializeField] List<DialogueLines> failureGoodSlimeLinesUsed = new();
     [SerializeField] private int InstructionsFollowed = 0;
     [SerializeField] private int InstructionsNotFollowed = 0;
 
@@ -71,6 +72,7 @@ public class GameSequenceManager : MonoBehaviour
     [SerializeField] public bool willAdvanceSequence = false;
     [SerializeField] public int slimeCount;
     [SerializeField] int badSlimesShipped;
+    [SerializeField] int goodSlimesTrashed;
     //[SerializeField] int badSlimesShipped;
 
     private void OnEnable()
@@ -114,7 +116,7 @@ public class GameSequenceManager : MonoBehaviour
         {
             ResultsTracker.ShipBad++;
             InstructionsNotFollowed++;
-            badSlimesShipped++;
+            goodSlimesTrashed++;
         }
         else if (willRespond && isCorrect && pipeExpectancy == "BadSlime") //Bad Slimes in Rehab Pipe
         {
@@ -136,11 +138,17 @@ public class GameSequenceManager : MonoBehaviour
             successLines.AddRange(successLinesUsed);
             successLinesUsed.Clear();
         }
-        if (failureLines.Count == 0)
+        if (failureSadSlimeLines.Count == 0)
         {
             //failureLines = failureLinesUsed;
-            failureLines.AddRange(failureLinesUsed);
-            failureLinesUsed.Clear();
+            failureSadSlimeLines.AddRange(failureSadSlimeLinesUsed);
+            failureSadSlimeLinesUsed.Clear();
+        }
+        if (failureGoodSlimeLines.Count == 0)
+        {
+            //failureLines = failureLinesUsed;
+            failureGoodSlimeLines.AddRange(failureGoodSlimeLinesUsed);
+            failureGoodSlimeLinesUsed.Clear();
         }
 
         if (willRespond && isCorrect && (InstructionsFollowed == 0 /*|| InstructionsFollowed % 2 == 0*/))
@@ -150,8 +158,13 @@ public class GameSequenceManager : MonoBehaviour
         }
         else if (willRespond && !isCorrect && (badSlimesShipped == 0 || badSlimesShipped % 2 == 0))
         {
-            WarnPlayer();
-            Debug.Log("Warn Player");
+            WarnPlayerSadSlime();
+            Debug.Log("Warn Player for putting sad slime in good pipe");
+        }
+        else if (willRespond && !isCorrect && (goodSlimesTrashed == 0 || goodSlimesTrashed % 2 == 0))
+        {
+            WarnPlayerGoodSlime();
+            Debug.Log("Warn Player for putting good slime in bad pipe");
         }
         else if (willAdvanceSequence)
         {
@@ -179,12 +192,20 @@ public class GameSequenceManager : MonoBehaviour
         }
     }
 
-    public void WarnPlayer()
+    public void WarnPlayerSadSlime()
     {
 
-        dialogueManager.QueueDialogue(failureLines[0]);
-        failureLinesUsed.Add(failureLines[0]);
-        failureLines.RemoveAt(0);
+        dialogueManager.QueueDialogue(failureSadSlimeLines[0]);
+        failureSadSlimeLinesUsed.Add(failureSadSlimeLines[0]);
+        failureSadSlimeLines.RemoveAt(0);
+        dialogueManager.AdvanceDialogue();
+    }
+    public void WarnPlayerGoodSlime()
+    {
+
+        dialogueManager.QueueDialogue(failureGoodSlimeLines[0]);
+        failureGoodSlimeLinesUsed.Add(failureGoodSlimeLines[0]);
+        failureGoodSlimeLines.RemoveAt(0);
         dialogueManager.AdvanceDialogue();
     }
 

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Oh careful, that tube is only for slimes that need rehabilitating.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 495715c84040807428371be06e87b45c, type: 3}
     showContinueButton: 0

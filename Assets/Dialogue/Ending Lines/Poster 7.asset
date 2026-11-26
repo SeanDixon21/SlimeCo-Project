@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: That damn poster keeps falling off!
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b8431bbcd24a9944b9617c98e1047951, type: 3}
     showContinueButton: 1

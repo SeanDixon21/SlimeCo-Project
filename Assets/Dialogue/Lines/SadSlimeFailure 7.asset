@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Let's not get careless with something so important.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ed8546f57c45ff946bdbcbb2e861cef6, type: 3}
     showContinueButton: 0

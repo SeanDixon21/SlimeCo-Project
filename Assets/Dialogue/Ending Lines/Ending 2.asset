@@ -15,5 +15,5 @@ MonoBehaviour:
   lines:
   - text: Before we look at your progress statistics, I would like to extend a huge
       thank you from SlimeCo.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: abda8ccfa5977a4428420c11d5e7f40d, type: 3}
     showContinueButton: 1

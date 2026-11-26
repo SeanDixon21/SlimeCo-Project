@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Oh, that one wasn't supposed to leave.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: fd19bef01e0554a44b9f27701c16df28, type: 3}
     showContinueButton: 0

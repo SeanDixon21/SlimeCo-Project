@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Remember, these little guys are going to someone's home.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 0db8e136233391d41aeb096f3fe0f00a, type: 3}
     showContinueButton: 0

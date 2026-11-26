@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Hello there! You must be employee 266!
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 36b20949d9636b14a955bf638aff0b03, type: 3}
     showContinueButton: 1
   - text: I am S.A.M, your Supervisionary Assitant Module. I will be here to help
       you settle into your new role.

@@ -15,5 +15,5 @@ MonoBehaviour:
   lines:
   - text: Each slime you send down the shipment pipe will be added to the customers
       package.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ec998fd9acb78874e949e773dfef659a, type: 3}
     showContinueButton: 1

@@ -32,7 +32,7 @@ MonoBehaviour:
     audio: {fileID: 8300000, guid: 2c16fc97211c8ae49abf2522c8c38e95, type: 3}
     showContinueButton: 1
   - text: Put good slimes in the right tube and bad slimes in the left.
-    audio: {fileID: 8300000, guid: 71f677b225db6e64da7852352ff993a4, type: 3}
+    audio: {fileID: 8300000, guid: 8a63dfbf4db6bed469da53df77c2dc6b, type: 3}
     showContinueButton: 1
   - text: Pretty simple for such good pay!
     audio: {fileID: 8300000, guid: 6a9a6f80611d2ca42b752048e4cc6be0, type: 3}

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Just a heads up, your performance may impact your pay review.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8e3cfcddcc3647d438a27cee760aedc7, type: 3}
     showContinueButton: 0

@@ -15,8 +15,8 @@ MonoBehaviour:
   lines:
   - text: You can use these buttons to spawn in what type of slime you think the
       customer would like.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 30cdcae51834b994d8a43b7417635cf9, type: 3}
     showContinueButton: 1
   - text: Pretty simple right.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ece2ee312793c44498d64f2e19da8d3a, type: 3}
     showContinueButton: 1

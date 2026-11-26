@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: We dont want customers feeling sad.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6cc1b4ebb7e985f4d85bbfc44cd6f0ab, type: 3}
     showContinueButton: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Repeated errors may require additional training.
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ea31b680c1a34a648a116f226a7f1fa0, type: 3}
     showContinueButton: 0

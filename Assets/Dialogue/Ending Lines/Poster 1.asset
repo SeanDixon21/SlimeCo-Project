@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: You were incredible at sorting those slime!
-    audio: {fileID: 8300000, guid: e1b3c2cb1631d8a41b6008ce147aeee3, type: 3}
+    audio: {fileID: 8300000, guid: 5c1baa3854f4b5640ab09732a3c526ee, type: 3}
     showContinueButton: 1

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: I'm beginning to think the signs aren't the problem.
-    audio: {fileID: 8300000, guid: e972d12798138bc4d9124cce271d192e, type: 3}
+    audio: {fileID: 8300000, guid: 46693da94c5e60541b4d7ba5a490c62b, type: 3}
     showContinueButton: 0

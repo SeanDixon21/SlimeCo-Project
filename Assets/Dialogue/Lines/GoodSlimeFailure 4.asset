@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Let's try to keep the good ones with the good ones, shall we?
-    audio: {fileID: 8300000, guid: 2c0e37fe4f48b8d4e9b283c64cead761, type: 3}
+    audio: {fileID: 8300000, guid: ff0278ec05ab0804898a8a12b3d63bed, type: 3}
     showContinueButton: 0

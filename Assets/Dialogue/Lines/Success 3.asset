@@ -15,5 +15,5 @@ MonoBehaviour:
   lines:
   - text: How cute! I'm sure they will both enjoy these slimes! Wonderful work! You've
       made their anniversary.
-    audio: {fileID: 8300000, guid: 9ddce3d27ecf3b54da029845aa6bab35, type: 3}
+    audio: {fileID: 8300000, guid: 7b155d1430c039b40aa6e01939c5854b, type: 3}
     showContinueButton: 0

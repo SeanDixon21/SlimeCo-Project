@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: The customers are sure to keep buying our Slimes!
-    audio: {fileID: 8300000, guid: 354d1735783e46d4988b81bd50c02653, type: 3}
+    audio: {fileID: 8300000, guid: 1cc2ade4d67d4ac478ef3cf9cbf48ec6, type: 3}
     showContinueButton: 1

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: 'Apologies Employee 265... '
-    audio: {fileID: 8300000, guid: 311c593a419e23045b55e572162802ea, type: 3}
+    audio: {fileID: 8300000, guid: 5e93c974e1d012d49b5a37b6db23de87, type: 3}
     showContinueButton: 1

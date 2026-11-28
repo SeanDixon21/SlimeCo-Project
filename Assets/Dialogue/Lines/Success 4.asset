@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Success 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: It's so heartwarming to see how much joy our little friends bring to families
-      during such dark times.
-    audio: {fileID: 8300000, guid: 1810175c3cc1a864088c258b0b3ae8ad, type: 3}
+  - text: You've got this!
+    audio: {fileID: 8300000, guid: f8ab57a46b276ae4f840726f707b53cd, type: 3}
     showContinueButton: 0

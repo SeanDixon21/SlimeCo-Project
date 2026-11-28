@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Our Sales are through the roof!
-    audio: {fileID: 8300000, guid: cca64c42e36e27140ab7f4488e38d8d0, type: 3}
+    audio: {fileID: 8300000, guid: a9df851650d513f4786c770bd2eed3cf, type: 3}
     showContinueButton: 1

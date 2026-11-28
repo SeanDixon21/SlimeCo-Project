@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Great Start!
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 52eb410a5538d5647bf405d84bee64d9, type: 3}
     showContinueButton: 0

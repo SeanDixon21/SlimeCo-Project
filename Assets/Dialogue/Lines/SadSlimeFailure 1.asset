@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Oh careful, that slime wasnt put in the right tube.
-    audio: {fileID: 8300000, guid: e39cb8a6234f3b2469b986f5019d1086, type: 3}
+    audio: {fileID: 8300000, guid: 378337ed0ea712c438938da8d6fe4d9b, type: 3}
     showContinueButton: 0

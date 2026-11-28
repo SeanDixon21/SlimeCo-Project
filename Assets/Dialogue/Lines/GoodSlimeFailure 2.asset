@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: A little mix-up! Nothing we can't fix.
-    audio: {fileID: 8300000, guid: 002991619fd6d6345842c5058ae8f05f, type: 3}
+    audio: {fileID: 8300000, guid: 10af1ccd603d0904a87efabb7c7deb8a, type: 3}
     showContinueButton: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Success 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
-  - text: Well done!
-    audio: {fileID: 8300000, guid: 96128e9a889c669438fad7bc8131e9b6, type: 3}
+  - text: Great Start!
+    audio: {fileID: 8300000, guid: f80256f30244890428feece621a03e4a, type: 3}
     showContinueButton: 0

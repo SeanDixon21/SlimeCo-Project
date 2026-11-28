@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: You are our best employee yet!
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 47329cfd816097148ab7a95a66d5aade, type: 3}
     showContinueButton: 0

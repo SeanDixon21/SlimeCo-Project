@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: I thought I stuck that up properly....
-    audio: {fileID: 8300000, guid: c7df34f39fd722a43a7f0c30ac8a99c9, type: 3}
+    audio: {fileID: 8300000, guid: a265a2e5a2fab094c955f386c2c6b38b, type: 3}
     showContinueButton: 1

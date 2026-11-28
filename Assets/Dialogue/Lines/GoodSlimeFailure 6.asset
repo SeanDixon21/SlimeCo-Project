@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Did you say you had prior experience?
-    audio: {fileID: 8300000, guid: d2ac104514366434487fed4e58cb2a68, type: 3}
+    audio: {fileID: 8300000, guid: 4a4705a3b108429489430a3ec429a064, type: 3}
     showContinueButton: 0

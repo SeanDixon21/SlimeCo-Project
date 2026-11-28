@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: 'Stand by for reprogramming.... '
-    audio: {fileID: 8300000, guid: 5c5cbf832a3f1ac468b8823e1803b861, type: 3}
+    audio: {fileID: 8300000, guid: b27c5fe07e5edf243aea5178dfa38706, type: 3}
     showContinueButton: 1

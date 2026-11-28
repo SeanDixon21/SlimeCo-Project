@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: The higher ups are very impressed with your first day!
-    audio: {fileID: 8300000, guid: b705aff979c0fdb47a3a591b56155348, type: 3}
+    audio: {fileID: 8300000, guid: 14439292708da064c9d6e5f341cc80e4, type: 3}
     showContinueButton: 1

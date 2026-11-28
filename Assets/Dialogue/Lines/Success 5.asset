@@ -15,5 +15,5 @@ MonoBehaviour:
   lines:
   - text: It's so heartwarming to see how much joy our little friends bring to families
       during such dark times.
-    audio: {fileID: 8300000, guid: 8bb48f1d482034c4390155973d0273b1, type: 3}
+    audio: {fileID: 8300000, guid: 950d6cb2942fa7a4199bbf6174de47ab, type: 3}
     showContinueButton: 0

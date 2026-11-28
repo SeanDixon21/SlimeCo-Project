@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: Here's your first slime!
-    audio: {fileID: 8300000, guid: b4dd8fd7c0c83204dbfccbc1a8f75082, type: 3}
+    audio: {fileID: 8300000, guid: a719b61ce9930ec44b081fc3aeefde71, type: 3}
     showContinueButton: 0

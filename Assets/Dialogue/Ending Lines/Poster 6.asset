@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLines
   lines:
   - text: You werent supposed to see that...
-    audio: {fileID: 8300000, guid: 1fda28bda4f80ec4292faed224d9fa32, type: 3}
+    audio: {fileID: 8300000, guid: 9c99a9668e11d2c45885695cb987752a, type: 3}
     showContinueButton: 1
